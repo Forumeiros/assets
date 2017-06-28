@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<!-- ->
+/*
+ *! Gerador de Formulários 2.0
+ *
+ *! Informações Importantes:
+ *  Este gerador foi feito por Luiz~.
+ *  SOMENTE USE ESTE GERADOR COM A PERMISSÃO DO CRIADOR.
+ *  Fóruns Oficiais de Suporte da Forumeiros podem usar e modificá-lo livremente.
+ *  [!] NÃO DISTRIBUIR! [!]
+ *
+ */
+<!- -->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gerador de Formulários 2.0</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://illiweb.com/fa/favicon/discussion.ico">
+
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400i,700,700i" rel="stylesheet">
+  <link href="https://forumeiros.github.io/assets/src/form-generator/styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <header class="page-header clearfix">
+    <a href="/" class="logo"><strong style="color:#39C;">Forum</strong>eiros</a>
+
+    <div class="social">
+      <a class="social-button fb-but" href="https://www.facebook.com/forumeirospt" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a>
+      <a class="social-button tw-but" href="https://twitter.com/Forumeiros_PT" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a>
+      <a class="social-button yt-but" href="https://www.youtube.com/user/tvforumeiros" target="_blank" title="Youtube"><i class="fa fa-youtube-play"></i></a>
+      <a class="social-button rs-but" href="/feed/?f=1" target="_blank" title="Feed de Notícias"><i class="fa fa-rss"></i></a>
+    </div>
+  </header><!-- .page-header -->
+
+  <div class="form-progress clearfix">
+    <div class="form-progress-inner">
+      <div id="step-1" class="step">
+        <span class="progress-status">
+          <span>1</span>
+        </span>
+        <span class="progress-text">Crie os Campos</span><i class="fa fa-chevron-right"></i>
+      </div>
+
+      <div id="step-2" class="step inactive">
+        <span class="progress-status">
+          <span>2</span>
+        </span>
+        <span class="progress-text">Configurar o formulário</span><i class="fa fa-chevron-right"></i>
+      </div>
+
+      <div id="step-3" class="step inactive" title="Clique no botão 'Gerar Código' (na parte 2) para gerar o código!">
+        <span class="progress-status">
+          <span>3</span>
+        </span>
+        <span class="progress-text">Instalação</span>
+      </div>
+    </div>
+  </div><!-- .form-progress -->
+
+  <div class="global-wrap global-part-1" style="display: block;">
+    <div class="info-text align-center">
+      <img src="https://i.imgur.com/qNpIots.png" alt="Gerador de Formulários (Imagem)" />
+      <h1 style="color: #e6ad1d;">Gerador de Formulários</h1><span class="badge">2.0</span>
+      <p>
+        Os formulários de postagem servem para agilizar a postagem de tópicos que seguem um determinado padrão. Anteriormente era necessário desenvolver cada formulário manualmente, porém com esse gerador é possível produzir um trabalho de qualidade sem ter que escrever uma linha de código.
+        <br/><br/>
+        Para <strong>começar</strong>, clique no <strong>sinal de adição</strong> na barra de navegação à direita. Caso você queira editar um campo, clique no lápis, e caso queira excluir um campo, clique no sinal de subtração.
+        <br/><br/>
+        Se achar que este formulário está muito complexo, você poderá utilizar o nosso <a href="/h15-">modelo antigo</a>.
+      </p>
+    </div>
+
+    <div class="wrap">
+      <div class="part create-inputs clearfix">
+
+        <h2 class="part-title"><i class="fa fa-edit"></i> Crie os Campos</h2>
+        <div class="wrapper-inner">
+          <div class="prev-wrap">
+            <!-- ENTRY PREV BEGIN -->
+            <div class="entry-prev"></div>
+            <!-- ENTRY PREV END -->
+          </div><!-- .prev-wrap -->
+          <button id="create-text-btn" class="font next-part">Próxima Parte <i class="fa fa-angle-right"></i></button>
+        </div><!-- .wrapper-inner -->
+
+        <div class="edit-section">
+          <div id="add-field" class="field-control">
+            <i class="fa fa-plus" title="Clique aqui para criar um novo campo."></i>
+            <span class="sr-only"> + </span>
+          </div>
+          <div id="edit-field" class="field-control">
+            <i class="fa fa-pencil" title="Clique aqui para editar um campo já criado."></i>
+            <span class="sr-only"> Editar </span>
+          </div>
+          <div id="remove-field" class="field-control">
+            <i class="fa fa-minus" title="Clique aqui para excluir um campo já criado."></i>
+            <span class="sr-only"> - </span>
+          </div>
+        </div><!-- .edit-section -->
+
+      </div><!-- .part .create-inputs -->
+    </div><!-- .wrap -->
+  </div><!-- .global-wrap.global-part-1 -->
+
+  <div class="global-wrap global-part-2" style="display: none;">
+    <div class="info-text align-center">
+      <img src="https://i.imgur.com/iJSucBj.png" alt="Gerador de Formulários (Imagem)" />
+      <h1 style="color: #e53;">Configurar o Formulário</h1>
+      <p>
+        Agora que você já criou os devidos campos de seu formulário, você poderá criar o título, a mensagem e a descrição os quais seu formulário postará.
+        <br><br>
+        Na tabela abaixo, você terá o nome (label) do input, seguido do seu código de incorporação, o qual você poderá usar no título, descrição ou mensagem. Ele irá se repor automaticamente pelo valor do campo.
+        <br><br>
+        Se você quiser voltar à etapa anterior, você pode voltar pelo botão "voltar", abaixo ou pelo menu de navegação (acima).
+      </p>
+    </div>
+    <div class="wrap">
+      <div class="part create-text clearfix">
+        <div class="presets-table">
+          <table>
+            <thead>
+              <tr class="non-removable">
+                <td>Input</td>
+                <td>Código</td>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+        <div class="config-form">
+          <div class="fa-form-group default-group">
+            <label for="form-function">Qual a função deste formulário?</label>
+            <select id="form-function" required>
+              <option value="" selected disabled>Selecione...</option>
+              <option value="form-newtopic">Criar um novo tópico.</option>
+              <option value="form-newpost">Responder à um tópico já existente.</option>
+            </select>
+          </div>
+
+          <form class="config-part part-fa-newtopic" data-toggle="form-newtopic" style="display: none;">
+            <div class="fa-form-group">
+              <label for="fa-form-title">Título do formulário:</label>
+              <input type="text" id="fa-form-title" required />
+            </div>
+
+            <div class="fa-form-group">
+              <label for="fa-newtopic-title">Título do tópico:</label>
+              <input type="text" id="fa-newtopic-title" required />
+            </div>
+
+            <div class="fa-form-group">
+              <label for="fa-newtopic-number">ID do fórum à qual será postado:</label>
+              <input type="number" id="fa-newtopic-number" required />
+            </div>
+
+            <div class="fa-form-group">
+              <label for="fa-newtopic-message">Mensagem:</label>
+              <textarea id="fa-newtopic-message" required></textarea>
+            </div>
+
+            <button data-code="topiccode" type="submit" class="generate-code font next-part">Gerar Código <i class="fa fa-angle-right"></i></button>
+          </form>
+
+          <form class="config-part part-fa-newpost" data-toggle="form-newpost" style="display: none;">
+            <div class="fa-form-group">
+              <label for="fa-form-title">Título do formulário:</label>
+              <input type="text" id="fa-form-title" required />
+            </div>
+
+            <div class="fa-form-group">
+              <label for="fa-newpost-number">ID do tópico à qual será postado:</label>
+              <input type="number" id="fa-newpost-number" required />
+            </div>
+
+            <div class="fa-form-group">
+              <label for="fa-newpost-message">Mensagem:</label>
+              <textarea id="fa-newpost-message" required></textarea>
+            </div>
+
+            <button data-code="postcode" type="submit" class="generate-code font next-part">Gerar Código <i class="fa fa-angle-right"></i></button>
+          </form>
+        </div>
+
+        <!-- Back btn -->
+        <button style="cursor: not-allowed;" class="pseudo-next-btn next-part-fake">Gerar Código <i class="fa fa-angle-right"></i></button>
+        <button id="back-to-1" class="back-part-btn font"><i class="fa fa-angle-left"></i> Voltar</button>
+      </div><!-- .part .create-text -->
+    </div>
+  </div><!-- .global-wrap.global-part-2 -->
+
+  <div class="global-wrap global-part-3" style="display: none;">
+    <div class="info-text align-center">
+      <img src="https://i.imgur.com/K8UZFrP.png" alt="Gerador de Formulários (Imagem)" />
+      <h1 style="color: #88cc55;">Instalação</h1>
+      <p>
+        Agora que você já completou todos os paços do gerador, você pode instalar o seu <strong>novo</strong> formulário em seu fórum! Para isso, siga os passos que serão colocados à seguir.
+        <br/> <br/>
+        Este gerador de formulários foi feito por <a href="/u60563">Luiz~</a>. Se você tem dúvidas, sugestões ou deseja comunicar um problema, contate o mesmo ou um <strong><span style="color: #EF3333;">Admin</span>eiro</strong> do Fórum dos Fóruns.
+      </p>
+    </div>
+    <div class="wrap">
+      <div class="part generate-code clearfix">
+        <div class="install-wrapper">
+          <h2 class="part-title"><i class="fa fa-edit"></i> Criação da página HTML (<span class="html-form-type"></span>)</h2>
+          <div class="install-code">
+            <p>
+              Em seu <strong>Painel de Controle</strong>, aceda à:
+              <br />
+              <strong>Módulos <i class="fa fa-long-arrow-right"></i> Gestão das Páginas HTML & JavaScript <i class="fa fa-long-arrow-right"></i> Gestão das Páginas HTML.</strong>
+              <br />
+              Feito isso, <strong>crie uma nova página</strong> com o código a seguir. Frisa-se que o título fica à seu critério.
+              <br />
+              Ressalta-se também que caso seja de seu agrado, você pode personalizar o formulário, tanto no quesito HTML, quanto no CSS, desde que você tenha conhecimento no assunto.
+            </p>
+            <!-- O código será gerado aqui -->
+            <div class="code-zone-to-append">
+              <code id="generated-code-zone" class="codebox">
+                <pre class="lang-html prettyprint"></pre>
+              </code>
+            </div>
+          </div>
+        </div>
+
+        <!-- Back btn: -->
+        <button id="back-to-2" class="back-part-btn font"><i class="fa fa-angle-left"></i> Voltar</button>
+      </div><!-- .part .generate-code -->
+    </div>
+  </div><!-- .global-wrap.global-part-3 -->
+
+  <!-- BEGIN Footer -->
+  <div id="footer">
+    <div class="content">
+      <div>&nbsp;</div>
+      <div class="bloc">
+        <strong class="h3">Forumeiros</strong>
+        <div><a href="/">Voltar ao suporte</a></div>
+        <div><a href="/h1-">Formulário antigo</a></div>
+        <div><a href="/feed/?f=1" target="_blank">Anúncios &amp; Atualizações</a></div>
+        <div><a href="http://www.forumeiros.com/beneficios-do-forum" target="_blank">Benefício de ter um fórum</a></div>
+        <div><a href="http://www.forumeiros.com/criar-forum/phpbb3" target="_blank">Não tem um fórum? Criar um fórum!</a></div>
+      </div>
+
+      <div class="bloc">
+        <strong class="h3">Sub-fóruns da categoria</strong>
+        <div><a href="/h4-" target="_blank">Atendimento ao usuário</a></div>
+        <div><a href="/f6-" target="_blank">Fórum de análises</a></div>
+        <div><a href="/c9-" target="_blank">Fórum das Publicidades</a></div>
+        <div><a href="/f61-" target="_blank">Parcerias</a></div>
+      </div>
+
+      <div class="bloc">
+        <strong class="h3">Siga-nos</strong>
+        <div><a href="https://www.facebook.com/forumeirospt" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></div>
+        <div><a href="https://twitter.com/Forumeiros_pt" target="_blank"><i class="fa fa-twitter"></i> Twitter</a></div>
+        <div><a href="https://www.youtube.com/user/tvforumeiros" target="_blank"><i class="fa fa-youtube-play"></i> Youtube</a></div>
+      </div>
+
+      <div class="bloc">
+        <strong class="h3">Informações</strong>
+        <div><a href="/t7556-" target="_blank">Equipe Forumeiros</a></div>
+        <div><a href="/t23-" target="_blank">Questões frequentes</a></div>
+        <div><a href="/t6745-" target="_blank">Tutoriais, dicas e astúcias</a></div>
+        <div>
+          <p>Gerador feito por <u><a href="/u60563" target="_blank">Luiz~</a></u>.</p>
+        </div>
+      </div>
+
+      <div style="clear:both"></div>
+      <hr />
+      <div class="footer-link">
+        <div><a href="http://www.forumeiros.com/criar-forum/phpbb3" target="_blank"><span>Criar um fórum</span></a></div>
+        <div><img src="https://i.imgur.com/RGPmnyq.png" alt="Fórum grátis"></div>
+        <div><a href="http://www.forumeiros.com/" target="_blank"><span>© 2015, forumeiros.com</span></a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Javascript's -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+  <script type="text/javascript" src="https://forumeiros.github.io/assets/src/form-generator/form-functions.js"></script>
+</body>
+</html>
