@@ -22,7 +22,7 @@
       $this.val($this.val().replace(/(\d{4})-(\d{2})-(\d{2})/g, function (date, year, month, day) {
         console.log(date);
         $this.attr('data-day', day + '/' + month + '/' + year);
-        return false;
+        return date;
       }));
     });
 
