@@ -43,7 +43,7 @@
 
       $textarea.val($textarea.val().replace(/\{\{campo(\d+)\}\}/gi, function(text, match) {
 
-        if ($('#campo' + match).attr('type') === 'data') {
+        if ($('#campo' + match).attr('type') === 'date') {
           return $('#campo' + match).attr('data-day');
         }
         
@@ -56,7 +56,7 @@
       
       $title.val($title.val().replace(/\{\{campo(\d+)\}\}/gi, function(text, match) {
 
-        if ($('#campo' + match).attr('type') === 'data') {
+        if ($('#campo' + match).attr('type') === 'date') {
           return $('#campo' + match).attr('data-day');
         }
         
