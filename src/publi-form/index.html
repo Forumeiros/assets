@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!-- ->
+/*
+ *! Gerador de Pedido de Análise
+ *
+ *! Informações Importantes:
+ *  Este formulário foi feito por Luiz~.
+ *  SOMENTE USE ESTE FORMULÁRIO COM A PERMISSÃO DO CRIADOR.
+ *  Fóruns Oficiais de Suporte da Forumeiros podem usar e modificá-lo livremente.
+ *  [!] NÃO DISTRIBUIR! [!]
+ *
+ */
+<!- -->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Formulário de Pedido de Análise</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://illiweb.com/fa/favicon/discussion.ico">
+
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://forumeiros.github.io/assets/src/publi-form/form-styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <header class="page-header clearfix">
+    <a href="/" class="logo"><strong style="color:#39C;">Forum</strong>eiros</a>
+
+    <div class="social">
+      <a class="social-button fb-but" href="https://www.facebook.com/forumeirospt" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a>
+      <a class="social-button tw-but" href="https://twitter.com/Forumeiros_PT" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a>
+      <a class="social-button yt-but" href="https://www.youtube.com/user/tvforumeiros" target="_blank" title="Youtube"><i class="fa fa-youtube-play"></i></a>
+      <a class="social-button rs-but" href="/feed/?f=1" target="_blank" title="Feed de Notícias"><i class="fa fa-rss"></i></a>
+    </div>
+  </header><!-- .page-header -->
+
+  <div class="form-progress clearfix">
+    <div class="form-progress-inner">
+      <div id="step-1" class="step">
+        <span class="progress-status">
+          <span>1</span>
+        </span>
+        <span class="progress-text">Complete os campos</span><i class="fa fa-chevron-right"></i>
+      </div>
+
+      <div id="step-2" class="step inactive">
+        <span class="progress-status">
+          <span>2</span>
+        </span>
+        <span class="progress-text">Descreva seu pedido</span><i class="fa fa-chevron-right"></i>
+      </div>
+
+      <div id="step-3" class="step inactive" title="Clique no botão 'Gerar Código' (na parte 2) para gerar o código!">
+        <span class="progress-status">
+          <span>3</span>
+        </span>
+        <span class="progress-text">Envie</span>
+      </div>
+    </div>
+  </div><!-- .form-progress -->
+
+  <div class="global-wrap global-part-1" style="display: block;">
+    <div class="info-text align-center">
+      <img src="http://i.imgur.com/YWeVWEK.png" alt="" />
+      <h1 style="color: #00b683;">Formulário de Pedido de Análise</h1>
+      <p>
+        Ao completar o formulário a seguir, um novo tópico com o seu fórum será criado no <a href="/f7-forum-das-analises" target="_blank">Setor das Análises</a>.
+        <br/><br/>
+        Complete todos os campos que forem pedidos. E lembre-se de ler atentamente <strong>todas</strong> regras do Setor de Análises, presente no <a href="/t49717-como-funciona-as-analises" target="_blank">regulamento</a>.
+        <br/><br/>
+        Se achar que este formulário está muito complexo, você poderá utilizar o nosso <a href="/h1-">modelo antigo</a>.
+      </p>
+    </div>
+
+    <div class="wrap">
+      <div class="part complete-fields clearfix">
+        <h2 class="part-title"><i class="fa fa-edit"></i> Complete os campos</h2>
+        <div class="wrapper-inner">
+          <div class="fa-fields-wrapper">
+
+            <!-- Begin Form Fields -->
+            <div class="fa-form-group">
+              <label for="data-forum-name">Nome do Fórum:</label>
+              <input type="text" id="data-forum-name" maxlength="100" class="form-control on-idle" required />
+            </div>
+
+            <div class="fa-form-group">
+              <label for="data-forum-url">Endereço URL do Fórum:</label>
+              <input type="text" id="data-forum-url" class="form-control on-idle" required />
+            </div>
+
+            <div class="fa-form-group">
+              <label for="data-forum-date">Data de Criação do Fórum:</label>
+              <input type="text" id="data-forum-date" class="form-control on-idle" required />
+            </div>
+
+            <div class="fa-form-group fa-form-group-two">
+              <div class="fa-inner-group">
+                <label for="data-forum-avaliation">Foi Avaliado Anteriormente?</label>
+                <select id="data-forum-avaliation" class="form-control on-idle" required>
+                  <option value="" selected>Selecione...</option>
+                  <option value="Sim">Sim</option>
+                  <option value="Não">Não</option>
+                </select>
+              </div>
+              <div class="fa-inner-group disabled-especial-inner disabled">
+                <label for="data-forum-last-avaliation">Última Avaliação:</label>
+                <input type="text" id="data-forum-last-avaliation" value="" class="form-control" disabled/>
+              </div>
+            </div>
+
+            <div class="fa-form-group">
+              <label for="data-forum-banner-url">URL do Banner (Capa) do Fórum:</label>
+              <input type="text" id="data-forum-banner-url" class="form-control on-idle" required />
+            </div>
+            <!-- End Form Fields -->
+
+          </div>
+          <button id="go-to-part-2" class="font next-part">Próxima Parte <i class="fa fa-angle-right"></i></button>
+        </div><!-- .wrapper-inner -->
+
+      </div><!-- .part .complete-fields -->
+    </div><!-- .wrap -->
+  </div><!-- .global-wrap.global-part-1 -->
+
+  <div class="global-wrap global-part-2" style="display: none;">
+    <div class="info-text align-center">
+      <img src="http://i.imgur.com/iJSucBj.png" alt="" />
+      <h1 style="color: #e53;">Descreva seu pedido</h1>
+      <p>
+        Complete a zona de texto abaixo com as algumas informações adicionais sobre seu fórum. O título é gerado automaticamente. Lembre-se também que para continuar, você deverá concordar com todas as cláusulas do regulamento do setor de análises.
+        <br />
+        O mínimo de caracteres para a descrição de seu fórum é <strong>100</strong>.
+      </p>
+    </div>
+
+    <div class="wrap">
+      <div class="part desc-fields clearfix">
+        <h2 class="part-title"><i class="fa fa-edit"></i> Descrever o pedido</h2>
+        <div class="wrapper-inner">
+          <div class="fa-content-wrapper">
+
+            <div class="fa-form-group disabled">
+              <label>Título do fórum:</label>
+              <input type="text" id="generated-topic-title" class="form-control" value="" disabled />
+            </div>
+
+            <div class="fa-form-group">
+              <label for="publi-forum-desc">Descrição do seu fórum:</label>
+              <textarea id="publi-forum-desc" class="form-control on-idle-2" style="height: 210px;" required></textarea>
+            </div>
+
+            <input type="checkbox" id="i-agree" class="on-idle-2" />
+            <label for="i-agree">Eu concordo com todas as cláusulas do <a href="/t49717-como-funciona-as-analises" target="_blank" class="white-a">regulamento do setor de análises</a>.</label>
+
+          </div>
+          <button id="back-to-1" class="back-part-btn font"><i class="fa fa-angle-left"></i> Voltar</button>
+          <button id="go-to-part-3" class="font next-part">Próxima Parte <i class="fa fa-angle-right"></i></button>
+        </div><!-- .wrapper-inner -->
+
+      </div><!-- .part .desc-fields -->
+    </div><!-- .wrap -->
+  </div><!-- .global-wrap.global-part-2 -->
+
+  <div class="global-wrap global-part-3" style="display: none;">
+    <div class="info-text align-center">
+      <img src="http://i.imgur.com/K8UZFrP.png" alt="" />
+      <h1 style="color: #8c5;">Envie</h1>
+      <p>
+        Você concluiu o formulário do setor de análises. Reveja o texto abaixo e confira se não há nenhum erro.
+        <br />
+        Caso você encontre algum erro, você ainda poderá voltar atrás — clicando no botão voltar — e corrigir seu erro.
+      </p>
+    </div>
+
+    <div class="wrap">
+      <div class="part send-form clearfix">
+        <h2 class="part-title"><i class="fa fa-edit"></i> Pré-visualização do novo tópico</h2>
+        <div class="wrapper-inner">
+          <div class="fa-content-wrapper">
+            <div id="preview-zone"></div>
+          </div>
+          <button id="back-to-2" class="back-part-btn font"><i class="fa fa-angle-left"></i> Voltar</button>
+          <button id="form-send" class="font next-part">Enviar <i class="fa fa-check"></i></button>
+        </div><!-- .wrapper-inner -->
+
+      </div><!-- .part .send-form -->
+    </div><!-- .wrap -->
+  </div><!-- .global-wrap.global-part-3 -->
+
+  <!-- BEGIN Footer -->
+  <div id="footer">
+    <div class="content">
+      <div>&nbsp;</div>
+      <div class="bloc">
+        <strong class="h3">Forumeiros</strong>
+        <div><a href="/">Voltar ao suporte</a></div>
+        <div><a href="/h1-">Formulário antigo</a></div>
+        <div><a href="/feed/?f=1" target="_blank">Anúncios &amp; Atualizações</a></div>
+        <div><a href="http://www.forumeiros.com/beneficios-do-forum" target="_blank">Benefício de ter um fórum</a></div>
+        <div><a href="http://www.forumeiros.com/criar-forum/phpbb3" target="_blank">Não tem um fórum? Criar um fórum!</a></div>
+      </div>
+
+      <div class="bloc">
+        <strong class="h3">Sub-fóruns da categoria</strong>
+        <div><a href="/h4-" target="_blank">Atendimento ao usuário</a></div>
+        <div><a href="/f6-" target="_blank">Fórum de análises</a></div>
+        <div><a href="/c9-" target="_blank">Fórum das Publicidades</a></div>
+        <div><a href="/f61-" target="_blank">Parcerias</a></div>
+      </div>
+
+      <div class="bloc">
+        <strong class="h3">Siga-nos</strong>
+        <div><a href="https://www.facebook.com/forumeirospt" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></div>
+        <div><a href="https://twitter.com/Forumeiros_pt" target="_blank"><i class="fa fa-twitter"></i> Twitter</a></div>
+        <div><a href="https://www.youtube.com/user/tvforumeiros" target="_blank"><i class="fa fa-youtube-play"></i> Youtube</a></div>
+      </div>
+
+      <div class="bloc">
+        <strong class="h3">Informações</strong>
+        <div><a href="/t7556-" target="_blank">Equipe Forumeiros</a></div>
+        <div><a href="/t23-" target="_blank">Questões frequentes</a></div>
+        <div><a href="/t6745-" target="_blank">Tutoriais, dicas e astúcias</a></div>
+        <div>
+          <p>Gerador feito por <u><a href="/u60563" target="_blank">Luiz~</a></u>.</p>
+        </div>
+      </div>
+
+      <div style="clear:both"></div>
+      <hr />
+      <div class="footer-link">
+        <div><a href="http://www.forumeiros.com/criar-forum/phpbb3" target="_blank"><span>Criar um fórum</span></a></div>
+        <div><img src="https://i.imgur.com/RGPmnyq.png" alt="Fórum grátis"></div>
+        <div><a href="http://www.forumeiros.com/" target="_blank"><span>© 2015, forumeiros.com</span></a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Javascript's -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://forumeiros.github.io/assets/src/publi-form/form-functions.js"></script>
+</body>
+</html>
