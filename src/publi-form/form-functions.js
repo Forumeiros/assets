@@ -179,6 +179,7 @@
       ].join('\n');
 
       var data = {
+        subject: $('#data-forum-name').val(),
         message: fullMessage,
         f: 7,
         mode: 'newtopic',
