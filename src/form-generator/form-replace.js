@@ -1,5 +1,7 @@
-/*
- * @author Luiz~
+/**
+ * Script usado para substituir os textos dos inputs.
+ * @version 2.0
+ * @licence MIT
  */
 (function($) {
   'use strict';
@@ -7,9 +9,9 @@
   $(function() {
     var $textarea = $('#fa-generated-message');
     var $title = $('#fa-generated-title');
-    var $btn = $('#fa-generated-form .post-button');
+    var $form = $('#fa-generated-form');
 
-    $btn.on('click', function(event) {
+    $form.on('submit', function(event) {
       
       if ($textarea.length === 0) {
         event.preventDefault();
