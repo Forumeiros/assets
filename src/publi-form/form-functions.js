@@ -183,8 +183,8 @@
       ].join('\n');
 
       var data = {
-        subject: $('#data-forum-name').val(),
-        message: fullMessage,
+        subject: 'Avaliação de : ' + $.trim($('#data-forum-name').val()),
+        message: $.trim(fullMessage),
         f: 7,
         mode: 'newtopic',
         post: 1,
@@ -198,7 +198,7 @@
 
       $.post('/post', encoded)
         .done(function () {
-          location.href = '/f7-forum';
+          location.pathname = '/f7-';
         })
         .fail(function () {
           alert('Ocorreu um erro!\nCaso continue, contate o Administrador.');
