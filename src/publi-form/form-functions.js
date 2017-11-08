@@ -186,8 +186,10 @@
         post: 1,
       };
 
-      var encoded = $.map(data, function(value, key) {
-        return key + '=' + escape(value);
+      var encode = document.charset.toLowerCase() === 'utf-8' ? window.encodeURIComponent : window.escape;
+       
+      var encoded = $.map(data, function (value, key) {
+        return key + '=' + encode(value);
       }).join('&');
 
       $.post('/post', encoded)
