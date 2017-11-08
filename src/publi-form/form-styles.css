@@ -276,6 +276,13 @@ div.step#step-2.inactive {
   width: 100%;
 }
 
+#preview-zone {
+  background-color: #fff;
+  color: #555;
+  padding: 20px;
+  border-radius: 3px;
+}
+
 .fa-form-group {
   color: #fff;
   -moz-transition: 100ms;
