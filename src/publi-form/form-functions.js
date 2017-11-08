@@ -174,7 +174,7 @@
         '',
         '[b]O fórum já foi avaliado?[/b] ' + $('#data-forum-avaliation').val(),
         '',
-        '[b]Última avaliação:[/b] ' + $('#data-forum-last-avaliation').val(),
+        '[b]Última avaliação:[/b] ' + $('#data-forum-last-avaliation').val() || 'Não informado.',
         '',
         '[b]Banner do fórum:[/b] ' + $('#data-forum-banner-url').val(),
         '',
