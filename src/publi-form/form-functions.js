@@ -157,6 +157,10 @@
      */
      $('#form-send').on('click', function () {
 
+      if ($(this).text() === 'Postando...') {
+        alert('Poste somente uma vez.');
+      }
+
       $(this).text('Postando...');
 
       var fullMessage = [
