@@ -132,9 +132,7 @@
         '<br /><br />',
         '<strong>O fórum já foi avaliado?</strong> ' + $('#data-forum-avaliation').val(),
         '<br /><br />',
-        '<strong>Última avaliação:</strong> ' + $('#data-forum-last-avaliation').val(),
-        '<br /><br />',
-        '<strong>Banner do fórum:</strong> ' + $('#data-forum-banner-url').val(),
+        '<strong>Última avaliação:</strong> ' + $('#data-forum-last-avaliation').val() || 'Não especificado.',
         '<br /><br />',
         '<strong>Descrição do meu fórum:</strong>',
         $('#publi-forum-desc').val()
@@ -164,7 +162,7 @@
       $(this).text('Postando...');
 
       var fullMessage = [
-        '[h3]' + $('#data-forum-name').val() + '[/h3]',
+        '[h2]' + $('#data-forum-name').val() + '[/h2]',
         '',
         '[b]Nome do fórum:[/b] ' + $('#data-forum-name').val(),
         '',
@@ -174,9 +172,7 @@
         '',
         '[b]O fórum já foi avaliado?[/b] ' + $('#data-forum-avaliation').val(),
         '',
-        '[b]Última avaliação:[/b] ' + $('#data-forum-last-avaliation').val() || 'Não informado.',
-        '',
-        '[b]Banner do fórum:[/b] ' + $('#data-forum-banner-url').val(),
+        '[b]Última avaliação:[/b] ' + $('#data-forum-last-avaliation').val() || 'Não especificado.',
         '',
         '[b]Descrição do meu fórum:[/b]',
         $('#publi-forum-desc').val()
