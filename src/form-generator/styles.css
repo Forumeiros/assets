@@ -466,6 +466,10 @@ body.is-editing .fa-form-group h4 {
   width: 40%;
 }
 
+.presets-table table tbody tr > td:last-child {
+  font-family: monospace;
+}
+
 .config-form {
   border-left: solid 2px #fff;
   margin-left: 10px;
