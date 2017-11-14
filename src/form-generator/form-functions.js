@@ -1,11 +1,16 @@
 /*globals jQuery, Clipboard*/
-/*
- * @author Luiz (http://ajuda.forumeiros.com/u60563)
+
+/**
+ * Código para gerar os formulários a partir do Gerador 2.0
+ *
+ * @author Luiz <http://ajuda.forumeiros.com/u60563>
+ * @version 1.2
  */
+ 
 (function ($) {
   'use strict';
 
-  /*
+  /**
    * Variáveis globais do script:
    */
   var $addField, $editField;
@@ -13,18 +18,18 @@
 
   $(function () {
 
-    /*
+    /**
      *! BEGIN PARTE 1 !
      */
     var $zone = $('.entry-prev');
     var $table = $('.presets-table table');
 
-    /*
+    /**
      * Cria o modal e o overlay (para gerar um novo campo):
      * @role Criação de HTML.
      */
     function addField () {
-      /*
+      /**
        * HTML do modal de criação do novo campo:
        */
       $addField = $([
@@ -85,7 +90,7 @@
         .appendTo('body')
       ;
 
-      /*
+      /**
        * Trigger para fechar o modal ao clicar no overlay ou no link de fechar:
        * @role Trigger.
        */
@@ -94,7 +99,7 @@
           .on('click', closeModal)
       ;
 
-      /*
+      /**
        * Criação de cada tipo de input, com base no seu tipo:
        * @role Trigger
        */
@@ -109,7 +114,7 @@
       ;
     }
 
-    /*
+    /**
      * Função para editar um campo,
      * tanto como posição, quanto como seus atributos.
      */
@@ -171,7 +176,7 @@
           .append('<i class="fa fa-pencil-square input-edit-trigger"></i>')
       ;
 
-      /*
+      /**
        * Trigger para abrir o modal de edição:
        * @role Trigger
        */
@@ -444,7 +449,7 @@
                 })
             ;
 
-            /*
+            /**
              * Trigger para fechar o modal ao clicar no overlay ou no link de fechar:
              * @role Trigger.
              */
@@ -456,7 +461,7 @@
           })
       ;
 
-      /*
+      /**
        * Criação dos botões de edição
        * para subir ou descer um grupo de input.
        */
@@ -470,7 +475,7 @@
         ].join('\n'));
       });
 
-      /*
+      /**
        * Trigger dos botões para subir ou descer um grupo de input.
        */
       $zone
@@ -537,7 +542,7 @@
 
     }
 
-    /*
+    /**
      * Função para remover um grupo de input.
      */
     function removeField () {
@@ -602,7 +607,7 @@
 
     }
 
-    /*
+    /**
      * Trigger para criar, editar ou remover um grupo de input.
      * @role Trigger.
      */
@@ -629,7 +634,7 @@
           .text('Configure seu input escolhido!')
       ;
 
-      /*
+      /**
        * Criação dum input tipo texto:
        */
       if (type === 'text') {
@@ -666,7 +671,7 @@
             ].join('\n'))
         ;
 
-        /*
+        /**
          * Input tipo texto:
          */
         $addField
@@ -700,7 +705,7 @@
         ;
       }
 
-      /*
+      /**
        * Textarea:
        */
       if (type === 'textarea') {
@@ -737,7 +742,7 @@
             ].join('\n'))
         ;
 
-        /*
+        /**
          * Criação do input criado:
          */
         $addField
@@ -771,7 +776,7 @@
         ;
       }
 
-      /*
+      /**
        * Input de tipo data:
        */
       if (type === 'date') {
@@ -804,7 +809,7 @@
             ].join('\n'))
         ;
 
-        /*
+        /**
          * Criação do input criado:
          */
         $addField
@@ -837,7 +842,7 @@
         ;
       }
 
-      /*
+      /**
        * Input de tipo cor:
        */
       if (type === 'color') {
@@ -865,7 +870,7 @@
             ].join('\n'))
         ;
 
-        /*
+        /**
          * Criação do input criado:
          */
         $addField
@@ -893,7 +898,7 @@
         ;
       }
 
-      /*
+      /**
        * Criação dum input tipo número:
        */
       if (type === 'number') {
@@ -938,7 +943,7 @@
             ].join('\n'))
         ;
 
-        /*
+        /**
          * Input tipo texto:
          */
         $addField
@@ -974,7 +979,7 @@
         ;
       }
 
-      /*
+      /**
        * Criação dum input tipo select (único):
        */
       if (type === 'selectU') {
@@ -1011,7 +1016,7 @@
             ].join('\n'))
         ;
 
-        /*
+        /**
          * Input tipo texto:
          */
         $addField
@@ -1067,7 +1072,7 @@
         ;
       }
 
-      /*
+      /**
        * Criação dum input tipo select (múltiplo):
        */
       if (type === 'selectM') {
@@ -1104,7 +1109,7 @@
             ].join('\n'))
         ;
 
-        /*
+        /**
          * Input tipo texto:
          */
         $addField
@@ -1160,7 +1165,7 @@
         ;
       }
 
-      /*
+      /**
        * Criação dum subtítulo
        */
       if (type === 'subtitle') {
@@ -1190,7 +1195,7 @@
             ].join('\n'))
         ;
 
-        /*
+        /**
          * Input tipo texto:
          */
         $addField
@@ -1216,7 +1221,7 @@
         ;
       }
 
-      /*
+      /**
        * Criação dum parágrafo explicativo.
        */
       if (type === 'exp-paragraph') {
@@ -1246,7 +1251,7 @@
             ].join('\n'))
         ;
 
-        /*
+        /**
          * Input tipo texto:
          */
         $addField
@@ -1272,7 +1277,7 @@
         ;
       }
 
-      /*
+      /**
        * Trigger dotão para voltar à seleção do tipo do input:
        * @role Trigger.
        */
@@ -1292,7 +1297,7 @@
       ;
     };
 
-    /*
+    /**
      * Função para remover qualquer modal aberto
      * na página. Basta chamar:
      * closeModal();
@@ -1302,7 +1307,7 @@
       $modal.remove();
     }
 
-    /*
+    /**
      * Função para identificar quando um editor
      * está ativado:
      */
@@ -1318,16 +1323,16 @@
       }
     });
 
-    /*
+    /**
      *! END PARTE 1 !
      */
 
-     /*
+     /**
       *! BEGIN PARTE 2 !
       *
       */
 
-    /*
+    /**
      * Navegação via menu:
      */
     $('#step-1').on('click', function () {
@@ -1340,7 +1345,7 @@
       $('.global-part-3').slideUp();
     });
 
-    /*
+    /**
      * Back Btns:
      */
     $('.global-part-2 .back-part-btn').on('click', function () {
@@ -1353,7 +1358,7 @@
       $('.global-part-2').slideDown();
     });
 
-    /*
+    /**
      * Adicionar/remover o cursor not-allowed,
      * no menu ou no botão, caso necessário:
      */
@@ -1372,7 +1377,7 @@
       }
     });
 
-    /*
+    /**
      * Botão da parte 1 que leva à 2:
      */   
     $('#create-text-btn, #step-2, #back-to-2').on('click', function () {
@@ -1393,7 +1398,7 @@
       generateTable();
     });
 
-    /*
+    /**
      * Gerar a tabela dos {{campos}}:
      */
     function generateTable () {
@@ -1422,14 +1427,14 @@
 
       });
 
-      /*
+      /**
        * Arrumar a parte 2.
        */
       var presetesTableHeight = $('.presets-table').height() - 1;
       $('.config-form').css('min-height', presetesTableHeight + 'px');
     }
 
-    /*
+    /**
      * Saber qual será o destino do formulário que
      * está sendo gerado.
      */
@@ -1463,7 +1468,7 @@
       generateCode(typeOfCode);
     });
 
-    /*
+    /**
      * Parte 03:
      * Função para gerar o código:
      * topiccode, postcode
@@ -1501,149 +1506,7 @@
           '  <meta http-equiv="X-UA-Compatible" content="ie=edge">',
           '  <title>' + POSTformTitle + '</title>',
           '',
-          '  <style type="text/css">',
-          '    *,',
-          '    *::before,',
-          '    *::after {',
-          '      padding: 0px;',
-          '      margin: 0px;',
-          '      box-sizing: border-box;',
-          '    }',
-          '',
-          '    html,',
-          '    body {',
-          '      height: 100%;',
-          '    }',
-          '',
-          '    body {',
-          '      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";',
-          '      font-size: 14px;',
-          '      line-height: 1.5;',
-          '      color: #24292e;',
-          '      background-color: #fff;',
-          '    }',
-          '',
-          '    #fa-generated-form {',
-          '      width: 60%;',
-          '      margin: 0 auto;',
-          '      background-color: #fff;',
-          '      border: solid 1px #ddd;',
-          '      border-radius: 0 0 3px 3px;',
-          '    }',
-          '',
-          '    .fa-form-wrapper {',
-          '      width: 100%;',
-          '    }',
-          '',
-          '    .fa-form-group {',
-          '      display: block;',
-          '      width: 100%;',
-          '      padding: 0px 20px;',
-          '    }',
-          '    ',
-          '    .fa-form-group *:last-child {',
-          '      margin-bottom: 7px;',
-          '    }',
-          '    ',
-          '    .fa-form-group h4 {',
-          '      font-size: 23px;',
-          '      color: #3072ab;',
-          '    }',
-          '    ',
-          '    .fa-form-group p {',
-          '      font-size: 16.4px;',
-          '      border-left: solid 3px #ddd;',
-          '      margin-left: -20px;',
-          '      padding-left: 17px;',
-          '      padding-top: 2px;',
-          '      padding-bottom: 2px;',
-          '    }',
-          '    ',
-          '    #fa-generated-form h1 {',
-          '      font-size: 35px;',
-          '      display: block;',
-          '      text-align: center;',
-          '      margin: 15px 0px;',
-          '      color: #ffffff;',
-          '      text-transform: uppercase;',
-          '      background-color: #3072ab;',
-          '      margin-top: 0px;',
-          '      font-weight: normal;',
-          '    }',
-          '',
-          '    .fa-form-group label {',
-          '      display: block;',
-          '      font-size: 16px;',
-          '      margin-bottom: 5px;',
-          '    }',
-          '',
-          '    .fa-form-group input,',
-          '    .fa-form-group textarea,',
-          '    .fa-form-group select {',
-          '      display: block;',
-          '      width: 100%;',
-          '      padding: .5rem .75rem;',
-          '      font-size: 1rem;',
-          '      line-height: 1.25;',
-          '      color: #464a4c;',
-          '      background-color: #fff;',
-          '      background-image: none;',
-          '      -webkit-background-clip: padding-box;',
-          '      background-clip: padding-box;',
-          '      border: 1px solid rgba(0,0,0,.15);',
-          '      border-radius: .25rem;',
-          '      -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;',
-          '      transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;',
-          '      -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;',
-          '      transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;',
-          '      transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;',
-          '    }',
-          '',
-          '    .fa-form-group input:focus,',
-          '    .fa-form-group textarea:focus,',
-          '    .fa-form-group select:focus {',
-          '      color: #464a4c;',
-          '      background-color: #fff;',
-          '      border-color: #5cb3fd;',
-          '      outline: 0;',
-          '    }',
-          '',
-          '    .fa-form-group select[multiple] {',
-          '      padding-right: 0px;',
-          '    }',
-          '',
-          '    .fa-submit {',
-          '      display: block;',
-          '      width: 100%;',
-          '      padding: 20px;',
-          '    }',
-          '',
-          '    .fa-submit button {',
-          '      padding: 10px 20px;',
-          '      background-color: #3072ab;',
-          '      color: #fff;',
-          '      font-size: 14px;',
-          '      border: none;',
-          '      border-radius: 3px;',
-          '    }',
-          '',
-          '    .fa-submit button:hover {',
-          '      background-color: #2a6192;',
-          '    }',
-          '',
-          '    [class*="conteneur"] form#fa-generated-form {',
-          '      border-top: solid 1px #ddd;',
-          '      margin-top: 20px;',
-          '      border-radius: 3px!important;',
-          '    }',
-          '',
-          '    @media (max-width: 700px) {',
-          '      #fa-generated-form {',
-          '       width: 100%;',
-          '       border: none;',
-          '      }',
-          '    }',
-          '  </style>',
+          '  <link rel="stylesheet" href="https://forumeiros.github.io/assets/src/form-generator/form-styles.css" />',
           '</head>',
           '<body>',
           '',
@@ -1728,149 +1591,7 @@
           '  <meta http-equiv="X-UA-Compatible" content="ie=edge">',
           '  <title>' + REPLYformTitle + '</title>',
           '',
-          '  <style type="text/css">',
-          '    *,',
-          '    *::before,',
-          '    *::after {',
-          '      padding: 0px;',
-          '      margin: 0px;',
-          '      box-sizing: border-box;',
-          '    }',
-          '',
-          '    html,',
-          '    body {',
-          '      height: 100%;',
-          '    }',
-          '',
-          '    body {',
-          '      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";',
-          '      font-size: 14px;',
-          '      line-height: 1.5;',
-          '      color: #24292e;',
-          '      background-color: #fff;',
-          '    }',
-          '',
-          '    #fa-generated-form {',
-          '      width: 60%;',
-          '      margin: 0 auto;',
-          '      background-color: #fff;',
-          '      border: solid 1px #ddd;',
-          '      border-radius: 0 0 3px 3px;',
-          '    }',
-          '',
-          '    .fa-form-wrapper {',
-          '      width: 100%;',
-          '    }',
-          '',
-          '    .fa-form-group {',
-          '      display: block;',
-          '      width: 100%;',
-          '      padding: 0px 20px;',
-          '    }',
-          '    ',
-          '    .fa-form-group *:last-child {',
-          '      margin-bottom: 7px;',
-          '    }',
-          '    ',
-          '    .fa-form-group h4 {',
-          '      font-size: 23px;',
-          '      color: #3072ab;',
-          '    }',
-          '    ',
-          '    .fa-form-group p {',
-          '      font-size: 16.4px;',
-          '      border-left: solid 3px #ddd;',
-          '      margin-left: -20px;',
-          '      padding-left: 17px;',
-          '      padding-top: 2px;',
-          '      padding-bottom: 2px;',
-          '    }',
-          '    ',
-          '    #fa-generated-form h1 {',
-          '      font-size: 35px;',
-          '      display: block;',
-          '      text-align: center;',
-          '      margin: 15px 0px;',
-          '      color: #ffffff;',
-          '      text-transform: uppercase;',
-          '      background-color: #3072ab;',
-          '      margin-top: 0px;',
-          '      font-weight: normal;',
-          '    }',
-          '',
-          '    .fa-form-group label {',
-          '      display: block;',
-          '      font-size: 16px;',
-          '      margin-bottom: 5px;',
-          '    }',
-          '',
-          '    .fa-form-group input,',
-          '    .fa-form-group textarea,',
-          '    .fa-form-group select {',
-          '      display: block;',
-          '      width: 100%;',
-          '      padding: .5rem .75rem;',
-          '      font-size: 1rem;',
-          '      line-height: 1.25;',
-          '      color: #464a4c;',
-          '      background-color: #fff;',
-          '      background-image: none;',
-          '      -webkit-background-clip: padding-box;',
-          '      background-clip: padding-box;',
-          '      border: 1px solid rgba(0,0,0,.15);',
-          '      border-radius: .25rem;',
-          '      -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;',
-          '      transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;',
-          '      -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;',
-          '      transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;',
-          '      transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;',
-          '    }',
-          '',
-          '    .fa-form-group input:focus,',
-          '    .fa-form-group textarea:focus,',
-          '    .fa-form-group select:focus {',
-          '      color: #464a4c;',
-          '      background-color: #fff;',
-          '      border-color: #5cb3fd;',
-          '      outline: 0;',
-          '    }',
-          '',
-          '    .fa-form-group select[multiple] {',
-          '      padding-right: 0px;',
-          '    }',
-          '',
-          '    .fa-submit {',
-          '      display: block;',
-          '      width: 100%;',
-          '      padding: 20px;',
-          '    }',
-          '',
-          '    .fa-submit button {',
-          '      padding: 10px 20px;',
-          '      background-color: #3072ab;',
-          '      color: #fff;',
-          '      font-size: 14px;',
-          '      border: none;',
-          '      border-radius: 3px;',
-          '    }',
-          '',
-          '    .fa-submit button:hover {',
-          '      background-color: #2a6192;',
-          '    }',
-          '',
-          '    [class*="conteneur"] form#fa-generated-form {',
-          '      border-top: solid 1px #ddd;',
-          '      margin-top: 20px;',
-          '      border-radius: 3px!important;',
-          '    }',
-          '',
-          '    @media (max-width: 700px) {',
-          '      #fa-generated-form {',
-          '       width: 100%;',
-          '       border: none;',
-          '      }',
-          '    }',
-          '  </style>',
+          '  <link rel="stylesheet" href="https://forumeiros.github.io/assets/src/form-generator/form-styles.css" />',
           '</head>',
           '<body>',
           '',
@@ -1928,7 +1649,7 @@
         $('#generated-code-zone pre').text(REPLYgeneratedCode);
       } // End postcode
 
-      /*
+      /**
        * Gerar o código novamente caso saia da parte 3:
        */
       $('#back-to-2, #step-1, #step-2').on('click', function () {
@@ -1936,7 +1657,7 @@
       });
     };
 
-    /*
+    /**
      * Copy Btn.
      */
     $('<a>', {
@@ -1958,6 +1679,6 @@
       }
     });
     
-    console.info('Scripts requeridos carregados com sucesso!\n[#3]');
+    console.info('Scripts requeridos carregados com sucesso!\n[ @version 1.2 ]');
   });
 }(jQuery));
