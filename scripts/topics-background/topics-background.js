@@ -1,3 +1,5 @@
+/*globals jQuery*/
+
 /**
  *! Colorir o fundo dos tópicos automaticamente.
  *
