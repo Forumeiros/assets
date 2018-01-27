@@ -14,7 +14,7 @@
     loading      : '<i class="fa fa-refresh fa-spin"></i> Postando sua mensagem...',
     success      : '<i class="fa fa-check-circle"></i> Mensagem postada com sucesso!',
     sceditorError: '<i class="fa fa-exclamation-circle"></i> O SCEditor não está disponível nessa página.',
-    min          : '<i class="fa fa-exclamation-circle"></i> Você deve postar uma mensagem com no mínimo 15 caracteres.',
+    min          : '<i class="fa fa-exclamation-circle"></i> Você deve postar uma mensagem com no mínimo 5 caracteres.',
     max          : '<i class="fa fa-exclamation-circle"></i> Você deve postar uma mensagem com no máximo 25000 caracteres.',
     postAjax     : '<i class="fa fa-exclamation-circle"></i> Não foi possível postar a sua mensagem, tendo em vista que um erro AJAX ocorreu.',
     getAjax      : '<i class="fa fa-exclamation-circle"></i> A sua mensagem foi postada com sucesso, no entanto, não foi possível carregá-la aqui.'
@@ -45,7 +45,7 @@
       loading      : 'Postando sua mensagem...',
       success      : 'Mensagem postada com sucesso!',
       sceditorError: 'O SCEditor não está disponível nessa página.',
-      min          : 'Você deve postar uma mensagem com no mínimo 15 caracteres.',
+      min          : 'Você deve postar uma mensagem com no mínimo 5 caracteres.',
       max          : 'Você deve postar uma mensagem com no máximo 25000 caracteres.',
       postAjax     : 'Não foi possível postar a sua mensagem, tendo em vista que um erro AJAX ocorreu.',
       getAjax      : 'A sua mensagem foi postada com sucesso, no entanto, não foi possível carregá-la aqui.'
@@ -213,10 +213,10 @@
 
     /**
      * Caso o valor do SCEditor seja menor
-     * que 15 caracteres, notifique o usuário
+     * que 5 caracteres, notifique o usuário
      * e pare a execução do script.
      */
-    if ($sceditor.val().length < 15) {
+    if ($sceditor.val().length < 5) {
       return {
         status  : false,
         response: self.config.min
