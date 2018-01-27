@@ -63,6 +63,7 @@
       $('<input />')
         .attr('type', 'radio')
         .attr('name', 'post_icon')
+        .attr('value', icon.id)
         .appendTo($label)
       ;
 
