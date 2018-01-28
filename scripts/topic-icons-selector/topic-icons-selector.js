@@ -21,7 +21,7 @@
     { img: 'https://i.imgur.com/v0PhT6I.png', id: 10 }, // Recusado
     { img: 'https://i.imgur.com/9yStjvf.png', id: 5 } // Importante
   ];
-  
+
   $(function () {
     /**
      * Parar a execução do script caso o usuário
@@ -42,7 +42,7 @@
      */
     $div.html([
       '<label>',
-      '  <input type="radio" name="post_icon">',
+      '  <input type="radio" name="post_icon" value="0">',
       '  <span class="fa-post-icon-label">Nenhum</span>',
       '</label>'
     ].join('\n'));
