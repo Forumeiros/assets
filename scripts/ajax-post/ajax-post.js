@@ -271,7 +271,6 @@
       tid       : $tid.val()  || '',
       mode      : 'reply',
       attach_sig: 1,
-      notify    : 1,
       status    : true,
       post      : 1
     };
