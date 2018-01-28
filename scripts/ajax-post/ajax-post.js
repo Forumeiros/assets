@@ -288,16 +288,16 @@
     var $tid = $('[name="tid"]');
 
     /**
-     * Objeto jQuery do input do ícone.
+     * Objeto jQuery do input do ícone, e o seu valor.
      */
     var $icon = self.$form.find('[name="post_icon"]');
+    var val   = $icon.serialize().replace(/^.*=(\d+)$/i, '$1');
 
     /**
      * Retorno (esperado) da função.
      */
-    return {
+    var data = {
       t         : location.pathname.replace(/^\/t(\d+)(p\d+-|-).*$/i, '$1'),
-      post_icon : $icon.serialize().replace(/^.*=(\d+)$/i, '$1'),
       message   : $sceditor.val(),
       tid       : $tid.val()  || '',
       mode      : 'reply',
@@ -305,6 +305,25 @@
       status    : true,
       post      : 1
     };
+
+    /**
+     * Correção do ícone.
+     */
+    if ($icon.length !== 0) {
+      if (val !== '') {
+        console.log('[FQR] Ícone encontrado e incluído.');
+        data.post_icon = val;
+      } else {
+        console.log('[FQR] Ícone encontrado e NÃO incluído.');
+      }
+    } else {
+      console.log('[FQR] Não foi encontrado ícone.');
+    }
+
+    /**
+     * Retorno da função.
+     */
+    return data;
   };
 
   /**
