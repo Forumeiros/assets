@@ -33,6 +33,14 @@
     }
 
     /**
+     * Caso o usuário não seja moderador daquele
+     * tópico, encerre a execução do script.
+     */
+    if (!$('a[href^="/modcp?mode=move"]').length) {
+      return;
+    }
+
+    /**
      * Criar um wrapper para os ícones.
      */
     var $div = $('<div>');
