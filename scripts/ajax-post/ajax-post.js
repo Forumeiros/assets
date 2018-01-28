@@ -60,7 +60,7 @@
 
   /**
    * Inicializa e faz os callback's das ações
-   * que são realizadas por este script. 
+   * que são realizadas por este script.
    *
    * @method  init
    * @return  {void}
@@ -72,7 +72,7 @@
      * @var {object}
      */
     var self = this;
-    
+
     /**
      * Caso a página atual não seja
      * um tópico, pare a execução
@@ -99,7 +99,7 @@
      * respostas rápidas for submetido para
      * iniciar as ações AJAX do script.
      */
-    self.$form.on('submit', function (event) {
+    self.$form.find('input[type="submit"][name="post"]').on('click', function (event) {
       event.preventDefault();
 
       /**
@@ -136,7 +136,7 @@
          */
         if (err) {
           self.alert(err, 'error');
-          return;  
+          return;
         }
 
         /**
@@ -149,7 +149,7 @@
            */
           if (err) {
             self.alert(err, 'error');
-            return;  
+            return;
           }
 
           /**
@@ -165,7 +165,7 @@
 
           /**
            * Caso o membro que tiver postado seja da equipe,
-           * pinte a borda do post de acordo com a cor do 
+           * pinte a borda do post de acordo com a cor do
            * seu grupo.
            */
           self.border();
@@ -205,7 +205,7 @@
      * @var {object}
      */
     var self = this;
-    
+
     /**
      * Caso o editor de texto não esteja presente,
      * notifique o usuário do erro e pare a execução
@@ -360,7 +360,7 @@
         $('html, body').stop().animate({
           scrollTop: $post.offset().top - 120
         });
-        
+
         callback.apply(self);
       })
       .fail(function () {
@@ -408,13 +408,13 @@
   /**
    * Insere uma alerta acima do editor.
    *
-   * @method  alert 
+   * @method  alert
    * @param   {string}
    * @param   {string}
    * @return  {void}
    */
   Post.prototype.alert = function (content, type) {
-    /** 
+    /**
      * Caso nenhum tipo for especificado,
      * o tipo padrão será `success`.
      */
