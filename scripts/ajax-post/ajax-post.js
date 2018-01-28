@@ -103,6 +103,13 @@
       event.preventDefault();
 
       /**
+       * Instância jQuery do link.
+       *
+       * @var {object}
+       */
+      var $link = $(this);
+
+      /**
        * Dados que devem ser enviados
        * à requisição assíncrona.
        */
@@ -118,6 +125,19 @@
         self.alert(data.response, 'error');
         return;
       }
+
+      /**
+       * Caso o botão tenha sido clicado 2x,
+       * previna o envio de duas mensagens.
+       */
+      if ($link.is('.is-disabled')) {
+        return;
+      }
+
+      $link
+        .addClass('is-disabled')
+        .prop('disabled', true)
+      ;
 
       /**
        * Emitir um alerta de que as
@@ -170,6 +190,17 @@
            */
           self.border();
 
+          /**
+           * Remover o status de disabled.
+           */
+          $link
+            .removeClass('is-disabled')
+            .prop('disabled', false)
+          ;
+
+          /**
+           * Alterar o ícone.
+           */
           var $img = $('.post:last').find('.topic-title > img');
           $('.post').not(':last').each(function () {
             var $this = $(this);
