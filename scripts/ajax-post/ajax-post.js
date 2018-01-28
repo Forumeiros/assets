@@ -88,11 +88,18 @@
     self.styles();
 
     /**
+     * Instância do formulário.
+     *
+     * @var {object}
+     */
+    self.$form = $('#quick_reply');
+
+    /**
      * Verifica quando o formulário de
      * respostas rápidas for submetido para
      * iniciar as ações AJAX do script.
      */
-    $('#quick_reply').on('submit', function (event) {
+    self.$form.on('submit', function (event) {
       event.preventDefault();
 
       /**
@@ -162,6 +169,13 @@
            * seu grupo.
            */
           self.border();
+
+          var $img = $('.post:last').find('.topic-title > img');
+          $('.post').not(':last').each(function () {
+            var $this = $(this);
+
+            $this.find('.topic-title > img').attr('src', $img.attr('src'));
+          });
         });
       });
     });
@@ -243,12 +257,18 @@
     var $tid = $('[name="tid"]');
 
     /**
+     * Objeto jQuery do input do ícone.
+     */
+    var $icon = self.$form.find('[name="post_icon"]');
+
+    /**
      * Retorno (esperado) da função.
      */
     return {
       t         : location.pathname.replace(/^\/t(\d+)(p\d+-|-).*$/i, '$1'),
+      post_icon : $icon.serialize().replace(/^.*=(\d+)$/i, '$1'),
       message   : $sceditor.val(),
-      tid       : $tid.val(),
+      tid       : $tid.val()  || '',
       mode      : 'reply',
       attach_sig: 1,
       notify    : 1,
