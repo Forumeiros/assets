@@ -1,4 +1,4 @@
-/*globals jQuery*/
+/*globals jQuery, _userdata*/
 
 /**
  *! POSTAR EM AJAX COM AVISOS
@@ -7,7 +7,7 @@
  * @see     {@link https://lffg.github.io}
  */
 
-(function ($) {
+(function($) {
   'use strict';
 
   var config = {
@@ -30,7 +30,7 @@
    *
    * @return  {void}
    */
-  window.FA.Ajax.Post = Post = function (userConfig) {
+  window.FA.Ajax.Post = Post = function(userConfig) {
     /**
      * Instância da classe.
      *
@@ -65,7 +65,7 @@
    * @method  init
    * @return  {void}
    */
-  Post.prototype.init = function () {
+  Post.prototype.init = function() {
     /**
      * Instância da classe.
      *
@@ -95,11 +95,66 @@
     self.$form = $('#quick_reply');
 
     /**
+     * Criar o botão de opções:
+     */
+    var $div = $([
+      '<fieldset class="fa-posting-options">',
+      '  <label>',
+      '    <input type="checkbox" name="disable_bbcode" id="fa-disable_bbcode" class="fa-custom-input" />',
+      '    <span>Desabilitar BBCode</span>',
+      '  </label>',
+      '  <label>',
+      '    <input type="checkbox" name="disable_smilies" id="fa-disable_smilies" class="fa-custom-input" />',
+      '    <span>Desabilitar Smileys</span>',
+      '  </label>',
+      '  <label class="fa-only-mod">',
+      '    <input type="checkbox" name="attach_sig" id="fa-attach_sig" checked="checked" class="fa-custom-input" />',
+      '    <span>Anexar assinatura</span>',
+      '  </label>',
+      '  <label>',
+      '    <input type="checkbox" name="notify" id="fa-notify" checked="checked" class="fa-custom-input" />',
+      '    <span>Notificar respostas</span>',
+      '  </label>',
+      '</fieldset>'
+    ].join('\n'))
+      .hide()
+      .css('padding', '15px')
+      .css('margin', '10px 0')
+      .insertAfter(self.$form.find('input[type="submit"][name="post"]'))
+    ;
+
+    /**
+     * Remover campos desnecessários a usuários comuns:
+     */
+    $div
+     .find('label')
+      .each(function() {
+        var $this = $(this);
+
+        if (_userdata.user_level === 1 || _userdata.user_level === 2) return;
+        if ($this.is('.fa-only-mod')) $this.remove();
+      })
+    ;
+
+    $('<button>', {
+      'class': 'button2',
+      'text': 'Opções de Postagem',
+      'type': 'button'
+    })
+      .insertBefore($div)
+      .on('click', function(event) {
+        event.preventDefault();
+
+        $div.stop().slideToggle(250);
+      })
+    ;
+
+    /**
      * Verifica quando o formulário de
      * respostas rápidas for submetido para
      * iniciar as ações AJAX do script.
      */
-    self.$form.find('input[type="submit"][name="post"]').on('click', function (event) {
+    self.$form.find('input[type="submit"][name="post"]').on('click', function(event) {
       event.preventDefault();
 
       /**
@@ -150,7 +205,7 @@
        * Fazer a requisição para postar
        * a mensagem.
        */
-      self.post(data, function (err) {
+      self.post(data, function(err) {
         /**
          * Caso exista algum erro.
          */
@@ -163,7 +218,7 @@
          * Fazer a requisição para recuperar
          * a mensagem postada.
          */
-        self.get(function (err, post) {
+        self.get(function(err, post) {
           /**
            * Caso exista algum erro.
            */
@@ -202,7 +257,7 @@
            * Alterar o ícone.
            */
           var $img = $('.post:last').find('.topic-title > img');
-          $('.post').not(':last').each(function () {
+          $('.post').not(':last').each(function() {
             var $this = $(this);
 
             $this.find('.topic-title > img').attr('src', $img.attr('src'));
@@ -218,7 +273,7 @@
    * @method  idTopic
    * @return  {boolean}
    */
-  Post.prototype.isTopic = function () {
+  Post.prototype.isTopic = function() {
     return /^\/t(\d+)(p\d+-|-).*$/i.test(location.pathname);
   };
 
@@ -229,7 +284,7 @@
    * @method  getData
    * @return  {object}
    */
-  Post.prototype.getData = function () {
+  Post.prototype.getData = function() {
     /**
      * Instância da classe.
      *
@@ -301,10 +356,21 @@
       message   : $sceditor.val(),
       tid       : $tid.val()  || '',
       mode      : 'reply',
-      attach_sig: 1,
       status    : true,
       post      : 1
     };
+
+    /**
+     * Adicionar os valores dos campos personalizados:
+     */
+    self.$form.find('.fa-custom-input').each(function() {
+      var $this = $(this);
+
+      if (! $this.prop('checked')) return;
+      if (! $this.attr('name')) return;
+
+      data[$this.attr('name')] = 1;
+    });
 
     /**
      * Correção do ícone.
@@ -334,7 +400,7 @@
    * @param   {function}
    * @return  {void}
    */
-  Post.prototype.post = function (data, callback) {
+  Post.prototype.post = function(data, callback) {
     /**
      * Instância da classe.
      *
@@ -346,14 +412,14 @@
      * Executar a requisição.
      */
     $.post('/post', data)
-      .done(function () {
+      .done(function() {
         /**
          * Caso a requisição tenha sido completada,
          * execute o callback sem lançar erros.
          */
         callback.apply(self);
       })
-      .fail(function () {
+      .fail(function() {
         /**
          * Caso a requisição não tenha sido completa,
          * execute o callback lançando o erro.
@@ -370,7 +436,7 @@
    * @param   {object}
    * @return  {void}
    */
-  Post.prototype.get = function (callback) {
+  Post.prototype.get = function(callback) {
     /**
      * Instância da classe.
      *
@@ -392,7 +458,7 @@
       t: topic,
       view: 'newest'
     })
-      .done(function (context) {
+      .done(function(context) {
         /**
          * Caso a requisição tenha sido completada,
          * recupere o post, inserindo-o após
@@ -412,7 +478,7 @@
 
         callback.apply(self);
       })
-      .fail(function () {
+      .fail(function() {
         /**
          * Caso a requisição não tenha sido completa,
          * execute o callback lançando o erro.
@@ -428,7 +494,7 @@
    * @method  border
    * @return  {void}
    */
-  Post.prototype.border = function () {
+  Post.prototype.border = function() {
     var $post = $('.post:last');
     var $user = $post.find('.postprofile strong > a > span[style]');
 
@@ -447,7 +513,7 @@
    * @method  removeValue
    * @return  {void}
    */
-  Post.prototype.removeValue = function () {
+  Post.prototype.removeValue = function() {
     $('#text_editor_textarea')
       .sceditor('instance')
       .val('')
@@ -462,7 +528,7 @@
    * @param   {string}
    * @return  {void}
    */
-  Post.prototype.alert = function (content, type) {
+  Post.prototype.alert = function(content, type) {
     /**
      * Caso nenhum tipo for especificado,
      * o tipo padrão será `success`.
@@ -491,7 +557,7 @@
    * @method  styles
    * @return  {void}
    */
-  Post.prototype.styles = function () {
+  Post.prototype.styles = function() {
     $('<style>')
       .text([
         '.fa-post-alert {',
@@ -529,7 +595,7 @@
     ;
   };
 
-  $(function () {
+  $(function() {
     /**
      * Instanciar a classe e iniciar.
      */
