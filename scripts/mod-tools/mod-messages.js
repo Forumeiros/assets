@@ -167,8 +167,167 @@
     {
       config: { name: 'Artmeiros', icon: 'fa fa-paint-brush', color: '#787DEA' },
       messages: [
-        { name: 'Teste ajrt 1', help: '1', content: 'teste aart 1!!' },
-        { name: 'Teste ajrt 2', help: '2', content: 'teste aart 2!!' }
+        {
+          name: 'Pedido resolvido',
+          content: [
+            '[table class="mod-action art"][tr][td class="icon fa fa-check"][/td][td][h4]Pedido finalizado[/h4]',
+            '',
+            'Pedido finalizado e membro satisfeito! [b]Tópico movido para "Pedidos Finalizados".[/b][/td][/tr][/table]'
+          ].join('\n')
+        },
+        {
+          name: 'Fórum recente (< 14 dias)',
+          help: 'Para fóruns que não tenham, no mínimo, 14 dias de "vida".',
+          content: [
+            '[table class="mod-action art"][tr][td class="icon fa fa-flag"][/td][td][h4]Fórum recente[/h4]',
+            '',
+            'Seu fórum foi criado a menos de 14 dias. E, de acordo com as regras, até que ele possua o período de tempo estipulado, seu tópico permanecerá trancado.',
+            '[size=10]Nota: O pedido será liberado em < DATA_DA_LIBERAÇÃO >.[/size]',
+            '',
+            'Aconselhamos também a leitura atenta das [url=http://ajuda.forumeiros.com/t32850-]regras do Setor Gráfico[/url].',
+            '',
+            '[i][b]Tópico pendente.[/b][/i][/td][/tr][/table]'
+          ].join('\n')
+        },
+        {
+          name: 'Pedido cancelado pelo autor (com propostas)',
+          help: 'Usado para quando um pedido for cancelado a pedido do autor mas tiver propostas.',
+          content: [
+            '[table class="mod-action art"][tr][td class="icon fa fa-archive"][/td][td][h4]Tópico arquivado[/h4]',
+            '',
+            'A pedido do autor, este pedido gráfico foi cancelado. No entanto, com a existência de respostas sob a forma de imagens, o tópico será movido para os arquivos de pedidos finalizados para que o autor deste mesmo tópico (ou outros membros) possam apreciar as sugestões e utilizá-las nos seus fóruns.',
+            '',
+            '[i][b]Tópico movido para "Pedidos Finalizados".[/b][/i][/td][/tr][/table]'
+          ].join('\n')
+        },
+        {
+          name: 'Pedido cancelado pelo autor (sem propostas)',
+          help: 'Usado para quando um pedido for cancelado a pedido do autor mas NÃO tiver propostas.',
+          content: [
+            '[table class="mod-action danger"][tr][td class="icon fa fa-trash-o"][/td][td][h4]Pedido cancelado[/h4]',
+            '',
+            'A pedido do autor, este pedido gráfico foi cancelado.',
+            '',
+            '[i][b]Tópico movido para a "Lixeira".[/b][/i][/td][/tr][/table]'
+          ].join('\n')
+        },
+        {
+          name: 'Pedido cancelado (abandonado) (com propostas)',
+          help: 'Usado para tópicos abandonados por mais de 2 dias mas que tenham propostas.',
+          content: [
+            '[table class="mod-action art"][tr][td class="icon fa fa-archive"][/td][td][h4]Tópico arquivado[/h4]',
+            '',
+            'Pedido finalizado após uma data igual ou superior a 2 dias sem respostas. No entanto, com a existência de respostas sob a forma de imagens, o tópico será movido para os pedidos finalizados para que o autor deste mesmo tópico (ou outros membros) possam apreciar as sugestões e utilizá-las nos seus fóruns.',
+            '',
+            '[i][b]Tópico movido para "Pedidos Finalizados".[/b][/i][/td][/tr][/table]'
+          ].join('\n')
+        },
+        {
+          name: 'Pedido cancelado (abandonado) (sem propostas)',
+          help: 'Usado para tópicos abandonados por mais de 2 dias mas que NÃO tenham recebido propostas.',
+          content: [
+            '[table class="mod-action danger"][tr][td class="icon fa fa-trash-o"][/td][td][h4]Pedido cancelado[/h4]',
+            '',
+            'Pedido cancelado após uma data igual ou superior a 2 dias sem respostas do autor.',
+            '',
+            '[b]Tópico movido para a "Lixeira".[/b][/td][/tr][/table]'
+          ].join('\n')
+        },
+        {
+          name: 'Autor banido (com propostas)',
+          help: 'Usado para quando o autor do tópico for banido, mas o pedido tiver propostas',
+          content: [
+            '[table class="mod-action art"][tr][td class="icon fa fa-archive"][/td][td][h4]Tópico arquivado[/h4]',
+            '',
+            'Dado que o autor encontra-se atualmente banido, este pedido gráfico foi cancelado. No entanto, com a existência de respostas sob a forma de imagens, o tópico será movido para os pedidos finalizados para que o autor deste mesmo tópico (ou outros membros) possam apreciar as sugestões e utilizá-las nos seus fóruns.',
+            '',
+            '[i][b]Tópico movido para "Pedidos Finalizados".[/b][/i][/td][/tr][/table]'
+          ].join('\n')
+        },
+        {
+          name: 'Autor banido (sem propostas)',
+          help: 'Usado para quando o autor do tópico for banido e NÃO tiverem propostas',
+          content: [
+            '[table class="mod-action danger"][tr][td class="icon fa fa-trash-o"][/td][td][h4]Pedido cancelado[/h4]',
+            '',
+            'Dado que o autor do tópico encontra-se atualmente banido, este pedido gráfico foi cancelado.',
+            '',
+            '[i][b]Tópico movido para a "Lixeira".[/b][/i][/td][/tr][/table]'
+          ].join('\n')
+        },
+        {
+          name: 'Formulário (pedido) incompleto',
+          help: 'Usado para tópicos em que o formulário não foi completo.',
+          content: [
+            '[table class="mod-action warning"][tr][td class="icon fa fa-question"][/td][td][h4]Pedido incompleto[/h4]',
+            '',
+            'O formulário do seu pedido gráfico está incompleto. Para que possamos avançar, é necessário que todos os campos sejam devidamente preenchidos. Salientamos que o(a) senhor(a) terá dois dias para completar o pedido. Caso isso não ocorra, seu tópico será descartado.',
+            '',
+            '[b]Em seu pedido está faltando:[/b] < Indicar o que falta, por exemplo: Link do fórum >',
+            '',
+            'Aconselhamos também a leitura atenta das [url=http://ajuda.forumeiros.com/t32850-]regras do Setor Gráfico[/url].',
+            '',
+            '[b][i]Tópico pendente.[/i][/b][/td][/tr][/table]'
+          ].join('\n')
+        },
+        {
+          name: 'Duplo pedido',
+          help: 'Só é permitido um pedido por vez.',
+          content: [
+            '[table class="mod-action danger"][tr][td class="icon fa fa-trash-o"][/td][td][h4]Pedido cancelado[/h4]',
+            '',
+            'Lamentamos o inconveniente, mas só é possível ter um pedido por vez para um mesmo fórum na área de criações gráficas. E foi constatado que existe(m) outro(s) tópico(s) no setor gráfico para este mesmo fórum. Sendo assim, pedimos que aguarde pela resolução do tópico mais antigo e que depois crie um novo.',
+            '',
+            '[b][i]Tópico movido para a "Lixeira".[/i][/b][/td][/tr][/table]'
+          ].join('\n')
+        },
+        {
+          name: 'Setor incorreta (suporte à códigos)',
+          help: 'Para tópicos que pedem suporte no setor gráfico',
+          content: [
+            '[table class="mod-action danger"][tr][td class="icon fa fa-code"][/td][td][h4]Setor incorreto[/h4]',
+            '',
+            'Dúvidas referentes a aparência do fórum ou sobre códigos para ele, devem ser tratadas no setor de suporte específicos, uma vez que esta área é exclusiva para as Criações Gráficas para usuários Forumeiros. Assim sendo o seu tópico será descartado.',
+            '',
+            'Aconselhamos você a criar um tópico no [url=http://ajuda.forumeiros.com/c3-]Setor de Suporte[/url].',
+            '',
+            '[b][i]Tópico movido para a "Lixeira".[/i][/b][/td][/tr][/table]'
+          ].join('\n')
+        },
+        {
+          name: 'Pedido muito avançado',
+          content: [
+            '[table class="mod-action art"][tr][td class="icon fa fa-info"][/td][td][h4]Pedido muito avançado[/h4]',
+            '',
+            'O seu pedido é composto por uma animação avançada. Sendo que a nossa equipe é voluntária e não é especializada nesse tipo de programas e/ou formatos, é possível que o seu pedido não seja atendido. Por isso, recomendamos que edite o seu pedido e peça uma animação simples para que nossa equipe possa chegar em um resultado aproximado do desejado.',
+            '',
+            'Você tem toda a liberdade de escolher se deseja ou não permanecer com o tópico do modo que está. Mas saiba que se o tópico não for alterado, terá somente 2 dias para ser atendido. Se não for atendido nesse prazo, o seu pedido será cancelado.',
+            '',
+            '[b][i]Tópico pendente.[/i][/b][/td][/tr][/table]'
+          ].join('\n')
+        },
+        {
+          name: 'Fórum ilegal',
+          help: 'Para tópicos em que o fórum não cumpre as CGU\'s.',
+          content: [
+            '[table class="mod-action danger"][tr][td class="icon fa fa-trash-o"][/td][td][h4]Pedido cancelado[/h4]',
+            '',
+            'Lamento, mas o seu fórum contém conteúdos ilícitos e não respeita as [url=https://www.forumeiros.com/condicoes-gerais]Condições Gerais de Utilização[/url] do serviço Forumeiros. Por esse motivo, o seu pedido não será atendido.',
+            '',
+            '[b][i]Tópico movido para a "Lixeira".[/i][/b][/td][/tr][/table]'
+          ].join('\n')
+        },
+        {
+          name: 'Fórum não-Forumeiros',
+          help: 'Para tópicos em que o fórum não é da Forumeiros.',
+          content: [
+            '[table class="mod-action danger"][tr][td class="icon fa fa-trash-o"][/td][td][h4]Pedido cancelado[/h4]',
+            '',
+            'Como o fórum posto no formulário não pertence ao serviço Forumeiros.com, este tópico está sendo descartado.',
+            '',
+            '[b][i]Tópico movido para a "Lixeira".[/i][/b][/td][/tr][/table]'
+          ].join('\n')
+        }
       ]
     },
     /**
@@ -179,8 +338,37 @@
     {
       config: { name: 'Publicideiros', icon: 'fa fa-bullhorn', color: '#00B5D1' },
       messages: [
-        { name: 'Teste pun 1', help: '1', content: 'teste pn 2!!' },
-        { name: 'Teste pp 2', help: '2', content: 'teste pp 2!!' },
+        {
+          name: 'Análise em curso',
+          help: 'Usada para análises que foram aceitas e que estão sendo feitas.',
+          content: [
+            '[table class="mod-action pub"][tr][td class="icon fa fa-refresh"][/td][td][h4]Análise em curso[/h4]',
+            '',
+            'O fórum será analisado e o resultado será postado em um prazo aceitável, baseado em minha disponibilidade. Antes de tudo, vale ressaltar que pedindo uma análise, você leu e concordou com as [url=http://ajuda.forumeiros.com/t49717-]regras do setor de análises[/url].[/td][/tr][/table]'
+          ].join('\n')
+        },
+        {
+          name: 'Análise concluída',
+          help: 'Usado para anunciar que a análise foi concluída.',
+          content: [
+            '[table class="mod-action pub"][tr][td class="icon fa fa-check"][/td][td][h4]Análise concluída[/h4]',
+            '',
+            'A sua análise foi concluída. Você pode conferir na [url=http://ajuda.forumeiros.com/f6-]lista de análises concluídas[/url].[/td][/tr][/table]'
+          ].join('\n')
+        },
+        {
+          name: 'Análise recusada',
+          help: 'Mensagem que deve ser usada quando uma análise é recusada.',
+          content: [
+            '[table class="mod-action danger"][tr][td class="icon fa fa-ban"][/td][td][h4]Análise recusada[/h4]',
+            '',
+            'Baseando-se nas [url=http://ajuda.forumeiros.com/t49717-]regras do setor de análises[/url], a sua análise foi recusada pelo seguinte motivo:',
+            '',
+            '  < Motivo >',
+            '',
+            '[i][b]Tópico movido para a "Lixeira".[/b][/i][/td][/tr][/table]'
+          ].join('\n')
+        }
       ]
     },
     /**
@@ -267,24 +455,19 @@
    * @return    {void}
    */
   Messages.prototype.init = function() {
-    var self = this;
+    if (_userdata.user_level !== 1 && _userdata.user_level !== 2) return;
+    if (! $.sceditor) return;
 
-    $(function() {
-    //$(window).on('load', function() {
-      if (_userdata.user_level !== 1 && _userdata.user_level !== 2) return;
-      if (! $.sceditor) return;
+    this.$editor = this.getEditorInstance();
+    this.$group  = this.createButtonGroup();
 
-      self.$editor = self.getEditorInstance();
-      self.$group  = self.createButtonGroup();
-  
-      /** Append the button to the group: */
-      self.$button.prependTo(self.$group);
-  
-      /** Append the dropdown to the body: */
-      self.$dropdown.appendTo('body');
-  
-      self.listenForEvents();
-    });
+    /** Append the button to the group: */
+    this.$button.prependTo(this.$group);
+
+    /** Append the dropdown to the body: */
+    this.$dropdown.appendTo('body');
+
+    this.listenForEvents();
   };
 
   /**
@@ -297,7 +480,7 @@
   Messages.prototype.createButton = function() {
     var $div = $('<div>', {
       'text': 'Mensagens moderativas'
-    }).css('background-image', 'url(https://i39.servimg.com/u/f39/18/21/41/30/tuto14.png)');
+    }).css('background-image', 'url(https://i.imgur.com/2JqY8il.png)');
 
     return $('<a>', {
       'class': 'sceditor-button sceditor-mod-messages-button',
@@ -418,7 +601,7 @@
 
       self.$dropdown
         .css('left', self.$button.offset().left)
-        .css('top', self.$button.offset().top + 2);
+        .css('top', self.$button.offset().top + 1);
 
       self.$dropdown.toggle();
     });
@@ -492,6 +675,9 @@
       '}'
     ].join('\n') }).appendTo('head');
   };
-
-  (new window.FA.Mod.Messages(categories)).init();
+  
+  // The editor is only available when the page is loaded.
+  $(window).on('load', function() {
+    (new window.FA.Mod.Messages(categories)).init();
+  });
 })(jQuery);
