@@ -5,7 +5,7 @@
  *
  * @author   Luiz Felipe F.
  * @see      https://lffg.github.io
- * @version  2.0.1
+ * @version  2.0.2
  * @license  MIT
  */
 
@@ -172,7 +172,9 @@
           content: [
             '[table class="mod-action art"][tr][td class="icon fa fa-check"][/td][td][h4]Pedido finalizado[/h4]',
             '',
-            'Pedido finalizado e membro satisfeito! [b]Tópico movido para "Pedidos Finalizados".[/b][/td][/tr][/table]'
+            'Pedido finalizado e membro satisfeito!',
+            '',
+            '[b][i]Tópico movido para "Pedidos Finalizados".[/i][/b][/td][/tr][/table]'
           ].join('\n')
         },
         {
@@ -230,7 +232,7 @@
             '',
             'Pedido cancelado após uma data igual ou superior a 2 dias sem respostas do autor.',
             '',
-            '[b]Tópico movido para a "Lixeira".[/b][/td][/tr][/table]'
+            '[b][i]Tópico movido para a "Lixeira".[/i][/b][/td][/tr][/table]'
           ].join('\n')
         },
         {
