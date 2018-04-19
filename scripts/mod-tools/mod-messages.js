@@ -5,7 +5,7 @@
  *
  * @author   Luiz Felipe F.
  * @see      https://lffg.github.io
- * @version  2.0.0
+ * @version  2.0.1
  * @license  MIT
  */
 
@@ -432,8 +432,6 @@
    * @return  {void}
    */
   window.FA.Mod.Messages = Messages = function(categories) {
-    if (! $.sceditor) return;
-
     if (! Array.isArray(categories)) {
       throw new TypeError('The categories param must be an array. Got ' + typeof categories);
     }
