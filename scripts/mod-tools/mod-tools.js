@@ -35,7 +35,7 @@
       return;
     }
 
-    if (!/^\/t(\d+)(p\d+-|-).*$/i.test(location.pathname)) {
+    if (! /^\/t(\d+)(p\d+-|-).*$/i.test(location.pathname)) {
       return;
     }
 
@@ -136,7 +136,7 @@
         return;
       }
 
-      if (!$tid.length) {
+      if (! $tid.length) {
         alert('[ERROR] Não foi possível encontrar o seletor do elemento TID.');
         location.href = $this.attr('href');
         return;
@@ -242,12 +242,10 @@
       $.get($this.attr('href'));
 
       if ($this.attr('href').indexOf('lock') === 12) {
-        alert('Tópico bloqueado!');
         change($this, 'unlock');
         return;
       }
-
-      alert('Tópico desbloqueado!');
+      
       change($this, 'lock');
     });
   };
@@ -268,13 +266,13 @@
         return;
       }
 
-      if (!$tid.length) {
+      if (! $tid.length) {
         alert('[ERROR] Não foi possível encontrar o seletor do elemento TID.');
         location.href = $this.attr('href');
         return;
       }
 
-      if (!$select.length) {
+      if (! $select.length) {
         alert('[ERROR] Não foi possível encontrar o seletor do elemento SELECT.');
         location.href = $this.attr('href');
         return;
