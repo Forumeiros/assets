@@ -910,3 +910,27 @@ table thead tr td:last-child {
     overflow: auto;
   }
 }
+
+#footer > div > div:nth-child(5) > div:nth-child(5) > p > a {
+    font-size: 0px;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border-radius: 3px;
+    background-color: #39c;
+    color: #fff;
+    transition: all 120ms linear;
+    text-align: center;
+    background-image: url(https://lffg.github.io/assets/img/background.svg),linear-gradient(to bottom, #2d91c3, #1e6cb9);
+    font-family:  'Nunito', 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Ubuntu', 'Arial', sans-serif;
+}
+
+#footer > div > div:nth-child(5) > div:nth-child(5) > p > a:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+#footer > div > div:nth-child(5) > div:nth-child(5) > p > a::after {
+    content: "Entre em contato comigo (Luiz Felipe).";
+    font-size: 17px;
+}
