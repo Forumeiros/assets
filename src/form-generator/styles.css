@@ -931,6 +931,6 @@ table thead tr td:last-child {
 }
 
 #footer > div > div:nth-child(5) > div:nth-child(5) > p > a::after {
-    content: "Entre em contato comigo (Luiz Felipe).";
+    content: "Entre em contato comigo (Luiz Felipe)";
     font-size: 17px;
 }
