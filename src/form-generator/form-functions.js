@@ -3,8 +3,10 @@
 /**
  * Código para gerar os formulários a partir do Gerador 2.0
  *
- * @author Luiz <http://ajuda.forumeiros.com/u60563>
- * @version 1.2
+ * Feito por Luiz Felipe Gonçalves:
+ * https://luizfelipe.dev
+ *
+ * NÃO UTILIZAR, REDISTRIBUIR OU COMPARTILHAR SEM A AUTORIZAÇÃO PRÉVIA DO AUTOR.
  */
  
 (function ($) {
@@ -1495,7 +1497,7 @@
           '<!-- ->',
           '/**',
           ' * Gerado em <ajuda.forumeiros.com>.',
-          ' * Gerador (2.0) feito por Luiz Felipe F. <https://lffg.github.io/>',
+          ' * Gerador (2.0) feito por Luiz Felipe G. <https://luizfelipe.dev>',
           ' *',
           ' * Se você tiver erros ou dúvidas, vá em: <ajuda.forumeiros.com>',
           ' */',
@@ -1580,7 +1582,7 @@
           '<!-- ->',
           '/**',
           ' * Gerado em <ajuda.forumeiros.com>.',
-          ' * Gerador (2.0) feito por Luiz Felipe F. <https://lffg.github.io/>',
+          ' * Gerador (2.0) feito por Luiz Felipe G. <https://luizfelipe.dev>',
           ' *',
           ' * Se você tiver erros ou dúvidas, vá em: <ajuda.forumeiros.com>',
           ' */',
