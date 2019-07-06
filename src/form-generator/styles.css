@@ -930,7 +930,8 @@ table thead tr td:last-child {
     transform: scale(1.05) translateY(-5px);
 }
 
+/* DO NOT REMOVE */
 #footer > div > div:nth-child(5) > div:nth-child(5) > p > a::after {
-    content: "Desenvolvido por Luiz Felipe F.";
-    font-size: 17px;
+    content: "Desenvolvido por Luiz Felipe Gonçalves";
+    font-size: 16px;
 }
