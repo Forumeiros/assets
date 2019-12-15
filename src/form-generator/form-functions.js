@@ -1662,7 +1662,7 @@
           color: dataType('color'),
           number: dataType('number'),
           select: dataType('select', ':not([multiple])'),
-          selectMultiple: dataType('number', '[multiple]'),
+          selectMultiple: dataType('select', '[multiple]'),
           subtitle: '.data-text.form-subtitle',
           paragraph: '.data-text.form-paragraph'
         };
