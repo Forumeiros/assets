@@ -1,7 +1,7 @@
 /*globals jQuery, Clipboard*/
 
 /**
- * Código para gerar os formulários a partir do Gerador 2.0
+ * Código para gerar os formulários a partir do Gerador de Formulários 2.0.
  *
  * Feito por Luiz Felipe Gonçalves:
  * https://luizfelipe.dev
