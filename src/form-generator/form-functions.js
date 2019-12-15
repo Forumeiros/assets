@@ -6,7 +6,7 @@
  * Feito por Luiz Felipe Gonçalves:
  * https://luizfelipe.dev
  *
- * NÃO UTILIZAR, REDISTRIBUIR OU COMPARTILHAR SEM A AUTORIZAÇÃO PRÉVIA DO AUTOR.
+ * NÃO REDISTRIBUIR OU COMPARTILHAR SEM A AUTORIZAÇÃO PRÉVIA DO AUTOR.
  */
  
 (function ($) {
