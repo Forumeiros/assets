@@ -2,11 +2,13 @@
 
 /**
  * Código para gerar os formulários a partir do Gerador de Formulários 2.0.
+ * Form Generator v2.0 Code.
  *
- * Feito por Luiz Felipe Gonçalves:
- * https://luizfelipe.dev
+ * Feito por Luiz Felipe Gonçalves <https://luizfelipe.dev>
+ * Developed by Luiz Felipe Gonçalves <https://luizfelipe.dev>
  *
  * NÃO REDISTRIBUIR OU COMPARTILHAR SEM A AUTORIZAÇÃO PRÉVIA DO AUTOR.
+ * DO NOT REDISTRIBUTE WITHOUT THE AUTHOR'S CONSENT.
  */
  
 (function ($) {
