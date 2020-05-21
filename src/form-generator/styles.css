@@ -930,8 +930,26 @@ table thead tr td:last-child {
     transform: scale(1.05) translateY(-5px);
 }
 
-/* DO NOT REMOVE */
 #footer > div > div:nth-child(5) > div:nth-child(5) > p > a::after {
-    content: "Desenvolvido por Luiz Felipe Gonçalves";
-    font-size: 16px;
+  content: "Desenvolvido por Luiz Felipe Gonçalves";
+  font-size: 16px;
+}
+
+.lffg-contact-info > div > a {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border-radius: 3px;
+  background-color: #39c;
+  font-size: 16px;
+  transition: all 120ms linear;
+  text-align: center;
+  background-image: url(https://lffg.github.io/assets/img/background.svg),linear-gradient(to bottom, #2d91c3, #1e6cb9);
+  font-family: 'Nunito', 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Ubuntu', 'Arial', sans-serif;
+  color: #fff !important;
+}
+
+.lffg-contact-info > div > a:hover {
+  transform: scale(1.05) translateY(-5px);
 }
