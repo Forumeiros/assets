@@ -1,15 +1,20 @@
-/*globals jQuery, Clipboard*/
-
-/**
- * Form Generator v2.0 Code.
+/*
+ *! Form Generator v2.0 Code.
  *
  * Developed by Luiz Felipe Gonçalves <https://luizfelipe.dev>
  * Translated by Chanp <https://ajuda.forumeiros.com/u64199>
  *
- * All Forumotion Support Forums may use and edit this code freely.
- * DO NOT REDISTRIBUTE WITHOUT THE AUTHOR'S CONSENT.
+ * All Forumotion Support Forums may use this code.
+ * DO NOT REDISTRIBUTE OR EDIT WITHOUT THE AUTHOR'S CONSENT.
+ *
+ * Do not modify the origin of any script or style sheet without contacting
+ * the generator's author (Luiz Felipe Gonçalves - https://luizfelipe.dev/).
+ *
+ * Copyright (c) Luiz Felipe Gonçalves. 2017-current.
  */
- 
+
+/*globals jQuery, Clipboard*/
+
 (function ($) {
   'use strict';
 
@@ -1382,7 +1387,7 @@
 
     /**
      * Botão da parte 1 que leva à 2:
-     */   
+     */
     $('#create-text-btn, #step-2, #back-to-2').on('click', function () {
       if ($('.entry-prev').find('.fa-form-group input, .fa-form-group select, .fa-form-group textarea').length === 0) {
         alert('You must creat at least one field!');
@@ -1669,24 +1674,24 @@
           subtitle: '.data-text.form-subtitle',
           paragraph: '.data-text.form-paragraph'
         };
-        
+
         function dataType(selector, customSelector) {
           return '[data-type="' + selector + '"]' + (customSelector || '');
         }
-        
+
         var fieldList = $('.entry-prev')
           .find('[data-type], .data-text')
           .map(function(index, node) {
             var $node = $(node);
             var currentName;
-        
+
             $.each(MAPPINGS, function(name, selector) {
               if ($node.is(selector)) {
                 currentName = name;
                 return false;
               }
             });
-        
+
             return currentName;
           })
           .get()
@@ -1698,7 +1703,7 @@
               FIELDS: fieldList,
               ACTION_TYPE: type,
               FORM_TITLE: title
-          });          
+          });
       }
 
       /**
@@ -1730,7 +1735,7 @@
         return trigger.nextElementSibling;
       }
     });
-    
+
     console.info('Scripts requeridos carregados com sucesso!\n[ @version 1.2 ]');
   });
 }(jQuery));
