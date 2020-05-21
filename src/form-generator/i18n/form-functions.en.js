@@ -649,7 +649,7 @@
         $addField
           .find('.modal')
             .append([
-              '<p class="part-obs">You chose a <em>input</em> of <strong>text</strong>! This is, <em>inputs</em> that accept any kind of text!</p>',
+              '<p class="part-obs">You chose an <em>input</em> of <strong>text</strong>! This is, <em>inputs</em> that accept any kind of text!</p>',
               '<p class="part-obs">Complete the fields below with the details of your new field.</p>',
               '<form class="configure-input">',
               '  <div class="modal-padding">',
@@ -720,7 +720,7 @@
         $addField
           .find('.modal')
             .append([
-              '<p class="part-obs">You chose a <em>zone</em> of <strong>text</strong>! This is, <em>textareas</em> that accept any kind of text!</p>',
+              '<p class="part-obs">You chose an <em>zone</em> of <strong>text</strong>! This is, <em>textareas</em> that accept any kind of text!</p>',
               '<p class="part-obs">Complete the fields below with the details of your new field.</p>',
               '<form class="configure-input">',
               '  <div class="modal-padding">',
@@ -791,7 +791,7 @@
         $addField
           .find('.modal')
             .append([
-              '<p class="part-obs">You chose a <em>input</em> of <strong>data</strong>! This is, <em>inputs</em> that accept only datas!</p>',
+              '<p class="part-obs">You chose an <em>input</em> of <strong>data</strong>! This is, <em>inputs</em> that accept only datas!</p>',
               '<p class="part-obs">Complete the fields below with the details of your new field.</p>',
               '<form class="configure-input">',
               '  <div class="modal-padding">',
@@ -857,7 +857,7 @@
         $addField
           .find('.modal')
             .append([
-              '<p class="part-obs">You chose a <em>input</em> of <strong>color</strong>! This is, <em>inputs</em> that accept only colors!</p>',
+              '<p class="part-obs">You chose an <em>input</em> of <strong>color</strong>! This is, <em>inputs</em> that accept only colors!</p>',
               '<p class="part-obs">Complete the fields below with the details of your new field.</p>',
               '<form class="configure-input">',
               '  <div class="modal-padding">',
@@ -913,7 +913,7 @@
         $addField
           .find('.modal')
             .append([
-              '<p class="part-obs">You chose a <em>input</em> of <strong>number</strong>! This is, <em>inputs</em> that accept only numbers!</p>',
+              '<p class="part-obs">You chose an <em>input</em> of <strong>number</strong>! This is, <em>inputs</em> that accept only numbers!</p>',
               '<p class="part-obs">Complete the fields below with the details of your new field.</p>',
               '<form class="configure-input">',
               '  <div class="modal-padding">',
@@ -994,7 +994,7 @@
         $addField
           .find('.modal')
             .append([
-              '<p class="part-obs">You chose a <em>input</em> of <strong>single select</strong>! This is, <em>inputs</em> that only accept a value pre-established by you!</p>',
+              '<p class="part-obs">You chose an <em>input</em> of <strong>single select</strong>! This is, <em>inputs</em> that only accept a value pre-established by you!</p>',
               '<p class="part-obs">Complete the fields below with the details of your new field.</p>',
               '<form class="configure-input">',
               '  <div class="modal-padding">',
@@ -1087,7 +1087,7 @@
         $addField
           .find('.modal')
             .append([
-              '<p class="part-obs">You chose a <em>input</em> of <strong>multiple select</strong>! This is, <em>inputs</em> that accept one or more values pre-established by you!</p>',
+              '<p class="part-obs">You chose an <em>input</em> of <strong>multiple select</strong>! This is, <em>inputs</em> that accept one or more values pre-established by you!</p>',
               '<p class="part-obs">Complete the fields below with the details of your new field.</p>',
               '<form class="configure-input">',
               '  <div class="modal-padding">',
@@ -1242,7 +1242,7 @@
         $addField
           .find('.modal')
             .append([
-              '<p class="part-obs">You chose a <strong>explanatory paragraph</strong>!</p>',
+              '<p class="part-obs">You chose an <strong>explanatory paragraph</strong>!</p>',
               '<p class="part-obs">Complete the fields below.</p>',
               '<form class="configure-input">',
               '  <div class="modal-padding">',
