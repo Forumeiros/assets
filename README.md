@@ -1,6 +1,6 @@
 # Forumeiros/assets
 
-Script especiais para o Fórum dos Fóruns, o fórum de suporte oficial da plataforma ***FORUMEIROS.com***.  
+Script especiais para o gerador de formulários do Fórum dos Fóruns, o fórum de suporte oficial da plataforma ***FORUMEIROS.com***.  
 Possuem forte ligação com o Gerdor de Formulários 2.0 e outros projetos internos da equipe.
 
 ## Aviso
