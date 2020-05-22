@@ -1007,7 +1007,7 @@
               '      <input type="text" id="input-label" value="" required />',
               '    </div>',
               '    <div class="form-group">',
-              '      <label for="input-vals">Valori del Campo (separarli con un'interruzione di riga):</label>',
+              '      <label for="input-vals">Valori del Campo (separarli con un\'interruzione di riga):</label>',
               '      <textarea id="input-vals" class="fa-valores" required></textarea>',
               '    </div>',
               '    <div class="form-group">',
@@ -1100,7 +1100,7 @@
               '      <input type="text" id="input-label" value="" required />',
               '    </div>',
               '    <div class="form-group">',
-              '      <label for="input-vals">Valori del Campo (separarli con un'interruzione di riga):</label>',
+              '      <label for="input-vals">Valori del Campo (separarli con un\'interruzione di riga):</label>',
               '      <textarea id="input-vals" required></textarea>',
               '    </div>',
               '    <div class="form-group">',
@@ -1395,7 +1395,7 @@
       }
 
       if ($('body').is('.is-editing')) {
-        alert('Completa prima la tua azione! (Fai clic sull'icona di spunta nella barra laterale di modifica).');
+        alert('Completa prima la tua azione! (Fai clic sull\'icona di spunta nella barra laterale di modifica).');
         return;
       }
 
@@ -1577,7 +1577,7 @@
       } // End topiccode
 
       if (codeType === 'postcode') {
-        $install.find('h2.part-title span.html-form-type').text('Rispondi All'argomento');
+        $install.find('h2.part-title span.html-form-type').text('Rispondi All\'argomento');
 
         var REPLYformTitle = $('.part-fa-newpost #fa-form-title').val();
         var REPLYtopicValue = $('.part-fa-newpost #fa-newpost-number').val();
