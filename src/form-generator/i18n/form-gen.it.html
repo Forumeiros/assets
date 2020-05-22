@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<!-- ->
+/*
+ *! Generatore di Moduli v2.0 Codice.
+ *
+ * Sviluppato da Luiz Felipe Gonçalves <https://luizfelipe.dev>
+ * Tradotto da Chanp <https://ajuda.forumeiros.com/u64199>
+ *
+ * Tutti i Forum di Supporto Forumattivo possono utilizzare questo codice.
+ * NON RIDISTRIBUIRE O MODIFICARE SENZA IL CONSENSO DELL'AUTORE.
+ *
+ * Non modificare l'origine di alcun script o stylesheet senza contattare
+ * l'autore del generatore (Luiz Felipe Gonçalves - https://luizfelipe.dev/).
+ *
+ * Copyright (c) Luiz Felipe Gonçalves. 2017-attuale.
+ */
+<!- -->
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Generatore di Moduli</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://illiweb.com/fa/favicon/discussion.ico" />
+
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400i,700,700i" rel="stylesheet" />
+  <link href="https://forumeiros.github.io/assets/src/form-generator/styles.css" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="page-header clearfix">
+    <a href="/" class="logo"><strong style="color:#39C;">Forum</strong>attivo</a>
+
+    <div class="social">
+      <a class="social-button fb-but" href="https://www.facebook.com/Forumattivo" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a>
+      <a class="social-button tw-but" href="https://twitter.com/Forumattivo" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a>
+      <a class="social-button yt-but" href="https://www.youtube.com/channel/UCqZq6HOLu6B4cQ9f7xxuMJg" target="_blank" title="Youtube"><i class="fa fa-youtube-play"></i></a>
+      <a class="social-button rs-but" href="/feed/?f=9" target="_blank" title="Update Feed"><i class="fa fa-rss"></i></a>
+    </div>
+  </header><!-- .page-header -->
+
+  <div class="form-progress clearfix">
+    <div class="form-progress-inner">
+      <div id="step-1" class="step">
+        <span class="progress-status">
+          <span>1</span>
+        </span>
+        <span class="progress-text">Crea i Campi</span><i class="fa fa-chevron-right"></i>
+      </div>
+
+      <div id="step-2" class="step inactive">
+        <span class="progress-status">
+          <span>2</span>
+        </span>
+        <span class="progress-text">Impostare il modulo</span><i class="fa fa-chevron-right"></i>
+      </div>
+
+      <div id="step-3" class="step inactive" title="Clique no botão 'Gerar Código' (na parte 2) para gerar o código!">
+        <span class="progress-status">
+          <span>3</span>
+        </span>
+        <span class="progress-text">Installazione</span>
+      </div>
+    </div>
+  </div><!-- .form-progress -->
+
+  <div class="global-wrap global-part-1" style="display: block;">
+    <div class="info-text align-center">
+      <img src="https://i.imgur.com/qNpIots.png" alt="Generatore di Moduli (Image)" />
+      <h1 style="color: #e6ad1d;">Generatore di Moduli</h1><span class="badge">2.0</span>
+      <p>
+        I moduli di pubblicazione vengono utilizzati per accelerare la pubblicazione di argomenti che seguono un determinato modello. In precedenza era necessario sviluppare manualmente ogni modulo, ma con questo generatore è possibile produrre un lavoro di qualità senza dover scrivere una riga di codice.
+        <br/><br/>
+        Per <strong>iniziare</strong>, fai clic sul <strong>segno più</strong> nella barra di navigazione a destra. Se si desidera modificare un campo, fare clic sulla matita e se si desidera eliminare un campo, fare clic sul segno meno.
+      </p>
+    </div>
+
+    <div class="wrap">
+      <div class="part create-inputs clearfix">
+
+        <h2 class="part-title"><i class="fa fa-edit"></i> Crea i Campi</h2>
+        <div class="wrapper-inner">
+          <div class="prev-wrap">
+            <!-- ENTRY PREV BEGIN -->
+            <div class="entry-prev"></div>
+            <!-- ENTRY PREV END -->
+          </div><!-- .prev-wrap -->
+          <button id="create-text-btn" class="font next-part">Prossimo <i class="fa fa-angle-right"></i></button>
+        </div><!-- .wrapper-inner -->
+
+        <div class="edit-section">
+          <div id="add-field" class="field-control">
+            <i class="fa fa-plus" title="Clicca qui per creare un nuovo campo."></i>
+            <span class="sr-only"> + </span>
+          </div>
+          <div id="edit-field" class="field-control">
+            <i class="fa fa-pencil" title="Clicca qui per modificare un campo."></i>
+            <span class="sr-only"> Modificare </span>
+          </div>
+          <div id="remove-field" class="field-control">
+            <i class="fa fa-minus" title="Clicca qui per cancellare un campo."></i>
+            <span class="sr-only"> - </span>
+          </div>
+        </div><!-- .edit-section -->
+
+      </div><!-- .part .create-inputs -->
+    </div><!-- .wrap -->
+  </div><!-- .global-wrap.global-part-1 -->
+
+  <div class="global-wrap global-part-2" style="display: none;">
+    <div class="info-text align-center">
+      <img src="https://i.imgur.com/iJSucBj.png" alt="" />
+      <h1 style="color: #e53;">Impostare il modulo</h1>
+      <p>
+        Ora che hai già creato i campi del tuo modulo, sarai in grado di creare il titolo, il messaggio e la descrizione che il tuo modulo pubblicherà.
+        <br><br>
+        Nella tabella seguente, avrai il nome di input (label) seguito dal tuo codice di incorporamento, che puoi usare nel titolo, nella descrizione o nel messaggio. Si sostituirà automaticamente al valore del campo.
+        <br><br>
+        Se vuoi tornare al passaggio precedente, puoi tornare indietro cliccando su pulsante "indietro" in basso o cliccando su menu di navigazione (sopra).
+      </p>
+    </div>
+    <div class="wrap">
+      <div class="part create-text clearfix">
+        <div class="presets-table">
+          <table>
+            <thead>
+              <tr class="non-removable">
+                <td>Input</td>
+                <td>Codice</td>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+        <div class="config-form">
+          <div class="fa-form-group default-group">
+            <label for="form-function">Qual è lo scopo di questo modulo?</label>
+            <select id="form-function" required>
+              <option value="" selected disabled>Selezionare...</option>
+              <option value="form-newtopic">Crea un nuovo argomento.</option>
+              <option value="form-newpost">Rispondi a un argomento esistente.</option>
+            </select>
+          </div>
+
+          <form class="config-part part-fa-newtopic" data-toggle="form-newtopic" style="display: none;">
+            <div class="fa-form-group">
+              <label for="fa-form-title">Titolo del modulo:</label>
+              <input type="text" id="fa-form-title" required />
+            </div>
+
+            <div class="fa-form-group">
+              <label for="fa-newtopic-title">Titolo del nuovo argomento:</label>
+              <input type="text" id="fa-newtopic-title" required />
+            </div>
+
+            <div class="fa-form-group">
+              <label for="fa-newtopic-number">ID del subforum dove verrà pubblicato:</label>
+              <input type="number" id="fa-newtopic-number" required />
+            </div>
+
+            <div class="fa-form-group">
+              <label for="fa-newtopic-message">Messaggio:</label>
+              <textarea id="fa-newtopic-message" required></textarea>
+            </div>
+
+            <button data-code="topiccode" type="submit" class="generate-code font next-part">Genera Codice <i class="fa fa-angle-right"></i></button>
+          </form>
+
+          <form class="config-part part-fa-newpost" data-toggle="form-newpost" style="display: none;">
+            <div class="fa-form-group">
+              <label for="fa-form-title">Titolo del modulo:</label>
+              <input type="text" id="fa-form-title" required />
+            </div>
+
+            <div class="fa-form-group">
+              <label for="fa-newpost-number">ID del argomento dove verrà pubblicato:</label>
+              <input type="number" id="fa-newpost-number" required />
+            </div>
+
+            <div class="fa-form-group">
+              <label for="fa-newpost-message">Messaggio:</label>
+              <textarea id="fa-newpost-message" required></textarea>
+            </div>
+
+            <button data-code="postcode" type="submit" class="generate-code font next-part">Genera Codice <i class="fa fa-angle-right"></i></button>
+          </form>
+        </div>
+
+        <!-- Back btn -->
+        <button style="cursor: not-allowed;" class="pseudo-next-btn next-part-fake">Genera Codice <i class="fa fa-angle-right"></i></button>
+        <button id="back-to-1" class="back-part-btn font"><i class="fa fa-angle-left"></i> Indietro</button>
+      </div><!-- .part .create-text -->
+    </div>
+  </div><!-- .global-wrap.global-part-2 -->
+
+  <div class="global-wrap global-part-3" style="display: none;">
+    <div class="info-text align-center">
+      <img src="https://i.imgur.com/K8UZFrP.png" alt="" />
+      <h1 style="color: #88cc55;">Installazione</h1>
+      <p>
+        Ora che hai completato tutti i passaggi del generatore, puoi installare il tuo <strong>nuovo</strong> modulo nel tuo forum! Per fare ciò, seguire i passaggi seguenti.
+        <br/> <br/>
+        Questo generatore di moduli è stato realizzato da <a href="http://ajuda.forumeiros.com/u60563">Luiz</a> del forum di supporto portoghese. Se hai una domanda o un suggerimento, contatta il <strong>Team di Supporto</strong> del tuo forum creando un argomento nella sezione di supporto.
+      </p>
+    </div>
+    <div class="wrap">
+      <div class="part generate-code clearfix">
+        <div class="install-wrapper">
+          <h2 class="part-title"><i class="fa fa-edit"></i> Creazione di pagine HTML (<span class="html-form-type"></span>)</h2>
+          <div class="install-code">
+            <p>
+              Sul tuo <strong>Pannello di Controllo</strong>, vai a:
+              <br />
+              <strong>Moduli <i class="fa fa-long-arrow-right"></i> Gestione di Pagine HTML e Javascript <i class="fa fa-long-arrow-right"></i> Gestione di Pagine HTML</strong>
+              <br />
+              Fatto ciò, <strong>crea una nuova pagina</strong> con il seguente codice. Si prega di notare che il titolo è a vostra discrezione.
+              <br />
+              Si sottolinea inoltre che, se lo desideri, puoi personalizzare il modulo come preferisci, purché tu abbia conoscenza della materia.
+            </p>
+            <!-- The code will be generated here. -->
+            <div class="code-zone-to-append">
+              <code id="generated-code-zone" class="codebox">
+                <pre class="lang-html prettyprint"></pre>
+              </code>
+            </div>
+          </div>
+        </div>
+
+        <!-- Back btn: -->
+        <button id="back-to-2" class="back-part-btn font"><i class="fa fa-angle-left"></i> Indietro</button>
+      </div><!-- .part .generate-code -->
+    </div>
+  </div><!-- .global-wrap.global-part-3 -->
+
+  <!-- BEGIN Footer -->
+  <div id="footer">
+    <div class="content">
+      <div>&nbsp;</div>
+      <div class="bloc">
+        <strong class="h3">FORUMATTIVO</strong>
+        <div><a href="/">Torna al forum di supporto</a></div>
+        <div><a href="/feed/?f=9" target="_blank">Feed di aggiornamento Forumattivo</a></div>
+        <div><a href="https://www.forumattivo.com/vantaggi-forum" target="_blank">Vantaggi di avere un forum</a></div>
+        <div><a href="https://www.forumattivo.com/creare-forum/phpbb3" target="_blank">Crea un forum gratuito</a></div>
+      </div>
+
+      <div class="bloc">
+        <strong class="h3">Servizi</strong>
+        <div><a href="/c2-" target="_blank">Sezione di Supporto</a></div>
+        <div><a href="/f45-" target="_blank">Sezione Grafica</a></div>
+        <div><a href="/f10-" target="_blank">Promozione dei Forum</a></div>
+        <div><a href="http://it.hitskin.com/" target="_blank">Temi di Forum Gratis</a></div>
+      </div>
+
+      <div class="bloc">
+        <strong class="h3">Seguici su</strong>
+        <div><a href="https://www.facebook.com/Forumattivo" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></div>
+        <div><a href="https://twitter.com/Forumattivo" target="_blank"><i class="fa fa-twitter"></i> Twitter</a></div>
+        <div><a href="https://www.youtube.com/channel/UCqZq6HOLu6B4cQ9f7xxuMJg" target="_blank"><i class="fa fa-youtube-play"></i> Youtube</a></div>
+      </div>
+
+      <div class="bloc">
+        <strong class="h3">Informazione</strong>
+        <div><a href="/t19986-" target="_blank">Team di supporto Forumattivo</a></div>
+        <div><a href="/t17807-" target="_blank">Regole della Sezione Grafica</a></div>
+        <div><a href="/f3-" target="_blank">Domande e Risposte Frequenti</a></div>
+        <div><a href="/f5-" target="_blank">Suggerimenti ed Tutorial</a></div>
+        <div class="lffg-contact-info">
+          <p>Generatore fatto da <u><a href="https://luizfelipe.dev" target="_blank">Luiz Felipe G.</a></u>.</p>
+          <div>
+            <a href="https://luizfelipe.dev" target="_blank">Sviluppato da Luiz Felipe Gonçalves</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="clear:both"></div>
+      <hr />
+      <div class="footer-link">
+        <div><a href="https://www.forumattivo.com/creare-forum/phpbb3" target="_blank"><span>Crea un forum</span></a></div>
+        <div><img src="https://i.imgur.com/RGPmnyq.png" alt="Forum gratis"></div>
+        <div><a href="https://www.forumattivo.com/" target="_blank"><span>© 2020, forumattivo.com</span></a></div>
+      </div>
+    </div>
+  </div><!-- .footer -->
+
+  <!-- Javascript's -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+  <script type="text/javascript" src="https://forumeiros.github.io/assets/src/form-generator/i18n/form-functions.en.js"></script>
+
+</body>
+</html>
