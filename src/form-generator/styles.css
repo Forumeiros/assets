@@ -100,11 +100,18 @@ header.page-header {
 header.page-header a.logo {
   color: #333;
   text-transform: uppercase;
-  background: url(https://i.imgur.com/xPZysoy.png) no-repeat 0 0;
-  padding: 10px 0px 10px 70px;
+  padding: 10px 0px 10px 10px;
   text-decoration: none;
   font-size: 36px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header.page-header a.logo::before {
+  content: "\f0e6";
+  font-family: "FontAwesome";
+  color: #39c;
+  margin-right: 8px;
+  font-size: 45px;
 }
 
 header.page-header a.logo:hover {
@@ -909,6 +916,21 @@ table thead tr td:last-child {
     max-height: 98vh;
     overflow: auto;
   }
+}
+
+#footer .footer-link div > img {
+  display: none;
+}
+
+#footer .footer-link div:nth-child(2)::before {
+  content: "\f0e6";
+  font-family: "FontAwesome";
+  color: #aaa;
+  margin-right: 8px;
+  font-size: 55px;
+  margin-top: -15px;
+  display: block;
+  margin-bottom: -5px;
 }
 
 #footer > div > div:nth-child(5) > div:nth-child(5) > p > a {
